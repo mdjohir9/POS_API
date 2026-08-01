@@ -1,0 +1,319 @@
+[
+  {
+    "ContainingType": "POS_API.Controllers.LogInController",
+    "Method": "PostUsers",
+    "RelativePath": "api/LogIn/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "POS_API.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.LogInController",
+    "Method": "PostUsers",
+    "RelativePath": "api/LogIn/registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usersDTO",
+        "Type": "POS_API.DTO.users.RegistrationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "GetDynamicMenue",
+    "RelativePath": "api/User/dynamicMenu",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DataAccessLevel",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "GetUserIdAndName",
+    "RelativePath": "api/User/UserNameAndId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataAccessLevel",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdministrator",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "PostUsers",
+    "RelativePath": "api/User/users/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usersDTO",
+        "Type": "POS_API.DTO.users.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/users/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "UploadImage",
+    "RelativePath": "api/User/users/ImageUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imageUpdateDTO",
+        "Type": "POS_API.DTO.ImageUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "UpdateUsersPassword",
+    "RelativePath": "api/User/users/password/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usersDTO",
+        "Type": "POS_API.DTO.users.UserPasswordUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserController",
+    "Method": "UpdateUsers",
+    "RelativePath": "api/User/users/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usersDTO",
+        "Type": "POS_API.DTO.UsersDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "PostUserRoles",
+    "RelativePath": "api/UserRoles/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRolesDTO",
+        "Type": "POS_API.DTO.UserRoles.UserRolesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "DeleteUserRole",
+    "RelativePath": "api/UserRoles/delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "UpdateUserRoles",
+    "RelativePath": "api/UserRoles/update/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userRolesDto",
+        "Type": "POS_API.DTO.UserRoles.UserRolesDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "GetUserRolesAsync",
+    "RelativePath": "api/UserRoles/userRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "companyId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsAdministrator",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "GetUserRole",
+    "RelativePath": "api/UserRoles/userRoles/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS_API.Controllers.UserRolesController",
+    "Method": "GetRolesWithGuestUserValidationAsync",
+    "RelativePath": "api/UserRoles/userRolesWithGuestUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IsGuestUser",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "CompanyId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
