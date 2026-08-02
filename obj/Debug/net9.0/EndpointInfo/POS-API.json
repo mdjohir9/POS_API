@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.0.1",
   "info": {
     "title": "POS API",
     "version": "v1"
@@ -814,7 +814,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "Enter JWT Token like: Bearer {your token}",
+        "description": "Please enter a valid token",
         "scheme": "Bearer",
         "bearerFormat": "JWT"
       }
