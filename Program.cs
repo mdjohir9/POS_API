@@ -122,7 +122,6 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-// CORS Middleware
 app.UseCors(MyAllowOrigins);
 
 // Static Files Setup
