@@ -260,7 +260,7 @@
               "RelativeDocumentMoniker": "Controllers\\LogInController.cs",
               "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\LogInController.cs",
               "RelativeToolTip": "Controllers\\LogInController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-01T10:04:15.743Z",
               "EditorCaption": ""
@@ -287,8 +287,7 @@
               "RelativeToolTip": "Entities\\Sales\\POS_SalesPayment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-02T10:24:59.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-02T10:24:59.706Z"
             },
             {
               "$type": "Document",
