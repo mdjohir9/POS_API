@@ -11,7 +11,7 @@ using Microsoft.Extensions.Caching.Memory;
 namespace POS_API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    //[ApiController]
     public class LogInController : ControllerBase
     {
         private ApplicationDbContext _dbContext;

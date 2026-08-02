@@ -10,7 +10,7 @@ namespace POS_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class UserRolesController : ControllerBase
     {
         private ApplicationDbContext _dbContext;

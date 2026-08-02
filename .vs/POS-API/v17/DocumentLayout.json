@@ -3,28 +3,120 @@
   "WorkspaceRootPath": "D:\\Personnel\\POS-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\sales\\pos_salespayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\sales\\pos_salespayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\dto\\logininfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:dto\\logininfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\timestampmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\timestampmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\implementation\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:implementation\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\sales\\pos_salespaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\sales\\pos_salespaymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\hrdcompanyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\hrdcompanyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\inventory\\pos_stockledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\inventory\\pos_stockledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\purchase\\pos_purchasedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\purchase\\pos_purchasedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\purchase\\pos_purchasemaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\purchase\\pos_purchasemaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\timestampmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\timestampmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\softdeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\softdeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\sales\\pos_salesmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\sales\\pos_salesmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\sales\\pos_salesdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\sales\\pos_salesdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\master\\pos_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\master\\pos_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\controllers\\userrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:controllers\\userrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\dto\\logininfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:dto\\logininfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\migrations\\20260801193735_ini=db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:migrations\\20260801193735_ini=db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\implementation\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:implementation\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\implementation\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:implementation\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\pos-api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:pos-api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\pos-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:pos-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\implementation\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,18 +135,6 @@
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\softdeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\softdeleteattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\hrdcompanyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\hrdcompanyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:entities\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,14 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\dto\\userroles\\ddlrolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:dto\\userroles\\ddlrolesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\controllers\\userrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:controllers\\userrolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\dto\\users\\registrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,10 +199,6 @@
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:repository\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|d:\\personnel\\pos-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{91258A9E-2EEA-4F60-B0E7-BD4780E4F47A}|POS-API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -142,7 +210,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,68 +230,358 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "POS_SalesPaymentMethod.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesPaymentMethod.cs",
+              "RelativeDocumentMoniker": "Entities\\Sales\\POS_SalesPaymentMethod.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesPaymentMethod.cs",
+              "RelativeToolTip": "Entities\\Sales\\POS_SalesPaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:26:00.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HrdCompanyInfo.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\HrdCompanyInfo.cs",
+              "RelativeDocumentMoniker": "Entities\\HrdCompanyInfo.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\HrdCompanyInfo.cs",
+              "RelativeToolTip": "Entities\\HrdCompanyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T09:50:52.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogInController.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\LogInController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LogInController.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\LogInController.cs",
+              "RelativeToolTip": "Controllers\\LogInController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T10:04:15.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T10:05:02.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "POS_SalesPayment.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesPayment.cs",
+              "RelativeDocumentMoniker": "Entities\\Sales\\POS_SalesPayment.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesPayment.cs",
+              "RelativeToolTip": "Entities\\Sales\\POS_SalesPayment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:24:59.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "POS_StockLedger.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Inventory\\POS_StockLedger.cs",
+              "RelativeDocumentMoniker": "Entities\\Inventory\\POS_StockLedger.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Inventory\\POS_StockLedger.cs",
+              "RelativeToolTip": "Entities\\Inventory\\POS_StockLedger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:27:22.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "POS_PurchaseDetail.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Purchase\\POS_PurchaseDetail.cs",
+              "RelativeDocumentMoniker": "Entities\\Purchase\\POS_PurchaseDetail.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Purchase\\POS_PurchaseDetail.cs",
+              "RelativeToolTip": "Entities\\Purchase\\POS_PurchaseDetail.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:05:45.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "POS_PurchaseMaster.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Purchase\\POS_PurchaseMaster.cs",
+              "RelativeDocumentMoniker": "Entities\\Purchase\\POS_PurchaseMaster.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Purchase\\POS_PurchaseMaster.cs",
+              "RelativeToolTip": "Entities\\Purchase\\POS_PurchaseMaster.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:05:11.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "POS_Product.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Product.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Product.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Product.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Product.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA8wE4AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:03:31.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "POS_Supplier.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Supplier.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Supplier.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Supplier.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Supplier.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:04:09.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SoftDeleteAttribute.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\SoftDeleteAttribute.cs",
+              "RelativeDocumentMoniker": "Entities\\SoftDeleteAttribute.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\SoftDeleteAttribute.cs",
+              "RelativeToolTip": "Entities\\SoftDeleteAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T09:41:30.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "POS_SalesMaster.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesMaster.cs",
+              "RelativeDocumentMoniker": "Entities\\Sales\\POS_SalesMaster.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesMaster.cs",
+              "RelativeToolTip": "Entities\\Sales\\POS_SalesMaster.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwCgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:06:31.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TimestampMiddleware.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\TimestampMiddleware.cs",
+              "RelativeDocumentMoniker": "Entities\\TimestampMiddleware.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\TimestampMiddleware.cs",
+              "RelativeToolTip": "Entities\\TimestampMiddleware.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T10:14:35.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "POS_Unit.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Unit.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Unit.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Unit.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Unit.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:02:37.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T04:43:11.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "POS_Brand.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Brand.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Brand.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Brand.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Brand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:02:03.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "POS_SalesDetail.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesDetail.cs",
+              "RelativeDocumentMoniker": "Entities\\Sales\\POS_SalesDetail.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Sales\\POS_SalesDetail.cs",
+              "RelativeToolTip": "Entities\\Sales\\POS_SalesDetail.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwCoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:07:02.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "POS_Customer.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Customer.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Customer.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Customer.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:04:46.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "POS_Category.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Category.cs",
+              "RelativeDocumentMoniker": "Entities\\Master\\POS_Category.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\Master\\POS_Category.cs",
+              "RelativeToolTip": "Entities\\Master\\POS_Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:01:22.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Entities\\BaseEntity.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Entities\\BaseEntity.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T10:00:21.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20260801193735_ini=db.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Migrations\\20260801193735_ini=db.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260801193735_ini=db.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Migrations\\20260801193735_ini=db.cs",
+              "RelativeToolTip": "Migrations\\20260801193735_ini=db.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T04:07:00.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Personnel\\POS-API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAI4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-01T04:20:08.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TimestampMiddleware.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\TimestampMiddleware.cs",
-              "RelativeDocumentMoniker": "Entities\\TimestampMiddleware.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\TimestampMiddleware.cs",
-              "RelativeToolTip": "Entities\\TimestampMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:14:35.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 22,
               "Title": "LoginInfoDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\LoginInfoDTO.cs",
               "RelativeDocumentMoniker": "DTO\\LoginInfoDTO.cs",
               "ToolTip": "D:\\Personnel\\POS-API\\DTO\\LoginInfoDTO.cs",
               "RelativeToolTip": "DTO\\LoginInfoDTO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA6wAYAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA2wAYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:12:49.764Z"
+              "WhenOpened": "2026-08-01T10:12:49.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 23,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IGenericRepository.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Repository\\IGenericRepository.cs",
+              "RelativeToolTip": "Repository\\IGenericRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T09:41:57.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserRolesController.cs",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\UserRolesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserRolesController.cs",
+              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\UserRolesController.cs",
+              "RelativeToolTip": "Controllers\\UserRolesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T10:07:50.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Implementation\\UserRepository.cs",
               "RelativeDocumentMoniker": "Implementation\\UserRepository.cs",
               "ToolTip": "D:\\Personnel\\POS-API\\Implementation\\UserRepository.cs",
               "RelativeToolTip": "Implementation\\UserRepository.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAmwAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAmwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T09:52:13.597Z"
+              "WhenOpened": "2026-08-01T09:52:13.597Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 26,
               "Title": "UserRoleRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Implementation\\UserRoleRepository.cs",
               "RelativeDocumentMoniker": "Implementation\\UserRoleRepository.cs",
               "ToolTip": "D:\\Personnel\\POS-API\\Implementation\\UserRoleRepository.cs",
               "RelativeToolTip": "Implementation\\UserRoleRepository.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAswGAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:00:02.059Z"
+              "WhenOpened": "2026-08-01T10:00:02.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 29,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Implementation\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Implementation\\UnitOfWork.cs",
@@ -235,7 +593,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 27,
+              "Title": "POS-API",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\POS-API.csproj",
+              "RelativeDocumentMoniker": "POS-API.csproj",
+              "ToolTip": "D:\\Personnel\\POS-API\\POS-API.csproj",
+              "RelativeToolTip": "POS-API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-02T03:56:57.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "POS-API",
+              "DocumentMoniker": "D:\\Personnel\\POS-API\\POS-API.csproj",
+              "RelativeDocumentMoniker": "POS-API.csproj",
+              "ToolTip": "D:\\Personnel\\POS-API\\POS-API.csproj",
+              "RelativeToolTip": "POS-API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-02T04:00:18.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Implementation\\LoginRepository.cs",
               "RelativeDocumentMoniker": "Implementation\\LoginRepository.cs",
@@ -247,19 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LogInController.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\LogInController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LogInController.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\LogInController.cs",
-              "RelativeToolTip": "Controllers\\LogInController.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAIwG0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:04:15.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 31,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Implementation\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Implementation\\GenericRepository.cs",
@@ -271,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 32,
               "Title": "UserRole.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\UserRole.cs",
               "RelativeDocumentMoniker": "Entities\\UserRole.cs",
@@ -283,43 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAuwAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T04:43:11.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SoftDeleteAttribute.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\SoftDeleteAttribute.cs",
-              "RelativeDocumentMoniker": "Entities\\SoftDeleteAttribute.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\SoftDeleteAttribute.cs",
-              "RelativeToolTip": "Entities\\SoftDeleteAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T09:41:30.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HrdCompanyInfo.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\HrdCompanyInfo.cs",
-              "RelativeDocumentMoniker": "Entities\\HrdCompanyInfo.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Entities\\HrdCompanyInfo.cs",
-              "RelativeToolTip": "Entities\\HrdCompanyInfo.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T09:50:52.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 33,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Entities\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Entities\\ApplicationDbContext.cs",
@@ -331,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 34,
               "Title": "UserRolesInfoDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\UserRoles\\UserRolesInfoDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UserRoles\\UserRolesInfoDTO.cs",
@@ -343,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 35,
               "Title": "UserRolesDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\UserRoles\\UserRolesDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UserRoles\\UserRolesDTO.cs",
@@ -355,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 36,
               "Title": "DdlRolesDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\UserRoles\\DdlRolesDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UserRoles\\DdlRolesDTO.cs",
@@ -367,31 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:05:02.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserRolesController.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Controllers\\UserRolesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserRolesController.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Controllers\\UserRolesController.cs",
-              "RelativeToolTip": "Controllers\\UserRolesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T10:07:50.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 37,
               "Title": "RegistrationDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\users\\RegistrationDTO.cs",
               "RelativeDocumentMoniker": "DTO\\users\\RegistrationDTO.cs",
@@ -403,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 38,
               "Title": "UserCreateDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\users\\UserCreateDTO.cs",
               "RelativeDocumentMoniker": "DTO\\users\\UserCreateDTO.cs",
@@ -415,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 39,
               "Title": "UserPasswordUpdateDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\users\\UserPasswordUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTO\\users\\UserPasswordUpdateDTO.cs",
@@ -427,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 40,
               "Title": "CompanyStatusDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\CompanyStatusDTO.cs",
               "RelativeDocumentMoniker": "DTO\\CompanyStatusDTO.cs",
@@ -439,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 41,
               "Title": "UsersDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\UsersDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UsersDTO.cs",
@@ -451,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 42,
               "Title": "UserProfileDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\UserProfileDTO.cs",
               "RelativeDocumentMoniker": "DTO\\UserProfileDTO.cs",
@@ -463,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 43,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTO\\LoginDTO.cs",
@@ -475,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 44,
               "Title": "ImageUpdateDTO.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\DTO\\ImageUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTO\\ImageUpdateDTO.cs",
@@ -487,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 45,
               "Title": "IUserRoleRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\IUserRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IUserRoleRepository.cs",
@@ -499,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IUserRepository.cs",
@@ -511,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 47,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Repository\\IUnitOfWork.cs",
@@ -523,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 48,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "Repository\\ILoginRepository.cs",
@@ -535,19 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\Personnel\\POS-API\\Repository\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IGenericRepository.cs",
-              "ToolTip": "D:\\Personnel\\POS-API\\Repository\\IGenericRepository.cs",
-              "RelativeToolTip": "Repository\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T09:41:57.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 49,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Personnel\\POS-API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
