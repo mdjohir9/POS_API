@@ -1,6 +1,6 @@
 ﻿namespace POS_API.Entities.Sales
 {
-    public class POS_SalesPayment
+    public class POSSalesPayment
     {
         public long Id { get; set; }
 
@@ -10,8 +10,8 @@
 
         public decimal Amount { get; set; }
 
-        public POS_SalesMaster Sales { get; set; } = null!;
+        public POSSalesMaster Sales { get; set; } = null!;
 
-        public POS_SalesPaymentMethod PaymentMethod { get; set; } = null!;
+        public POSSalesPaymentMethod PaymentMethod { get; set; } = null!;
     }
 }

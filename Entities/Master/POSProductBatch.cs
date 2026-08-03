@@ -5,13 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Master
 {
-    public class POS_ProductBatch:BaseEntity
+    public class POSProductBatch:BaseEntity
     {
         [Required]
-        public int ProductId { get; set; }
+        public long ProductId { get; set; }
 
         [ForeignKey(nameof(ProductId))]
-        public POS_Product? Product { get; set; }
+        public POSProduct? Product { get; set; }
 
 
         [Required]
@@ -50,8 +50,8 @@ namespace POS_API.Entities.Master
 
 
         // Navigation
-        public ICollection<POS_PurchaseDetail>? PurchaseDetails { get; set; }
+        public ICollection<POSPurchaseDetail>? PurchaseDetails { get; set; }
 
-        public ICollection<POS_SalesDetail>? SalesDetails { get; set; }
+        public ICollection<POSSalesDetail>? SalesDetails { get; set; }
     }
 }

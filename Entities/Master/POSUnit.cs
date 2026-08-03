@@ -2,7 +2,7 @@
 
 namespace POS_API.Entities.Master
 {
-    public class POS_Unit : BaseEntity
+    public class POSUnit : BaseEntity
     {
         [Required]
         [MaxLength(50)]
@@ -13,6 +13,6 @@ namespace POS_API.Entities.Master
         public string? ShortName { get; set; }
 
 
-        public ICollection<POS_Product>? Products { get; set; }
+        public ICollection<POSProduct>? Products { get; set; }
     }
 }

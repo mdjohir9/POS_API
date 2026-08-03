@@ -20,6 +20,6 @@ namespace POS_API.Entities.Inventory
 
         public decimal BalanceQuantity { get; set; }
 
-        public POS_Product Product { get; set; } = null!;
+        public POSProduct Product { get; set; } = null!;
     }
 }

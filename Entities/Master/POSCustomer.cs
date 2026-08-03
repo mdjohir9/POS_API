@@ -2,18 +2,17 @@
 
 namespace POS_API.Entities.Master
 {
-    public class POS_Supplier : BaseEntity
+    public class POSCustomer:BaseEntity
     {
-
         [Required]
         [MaxLength(50)]
-        public string? SupplierCode { get; set; }
+        public string? CustomerCode { get; set; }
 
 
 
         [Required]
         [MaxLength(150)]
-        public string? SupplierName { get; set; }
+        public string? CustomerName { get; set; }
 
 
 

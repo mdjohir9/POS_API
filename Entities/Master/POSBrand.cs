@@ -2,13 +2,13 @@
 
 namespace POS_API.Entities.Master
 {
-    public class POS_Brand : BaseEntity
+    public class POSBrand : BaseEntity
     {
         [Required]
         [MaxLength(100)]
         public string? Name { get; set; }
 
 
-        public ICollection<POS_Product>? Products { get; set; }
+        public ICollection<POSProduct>? Products { get; set; }
     }
 }

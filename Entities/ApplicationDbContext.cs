@@ -19,19 +19,19 @@ namespace POS_API.Entities
 
         public DbSet<HrdCompanyInfo> HrdCompanyInfo { get; set; }
 
-        public DbSet<POS_Brand> Brands { get; set; }
-        public DbSet<POS_Category> POS_Categorys { get; set; }
-        public DbSet<POS_Unit> POS_Units { get; set; }
-        public DbSet<POS_Product> POS_Products { get; set; }
-        public DbSet<POS_ProductBatch> POS_ProductBatchs { get; set; }
-        public DbSet<POS_Supplier> POS_Suppliers { get; set; }
-        public DbSet<POS_Customer> POS_Customers { get; set; }
-        public DbSet<POS_PurchaseMaster> POS_PurchaseMasters { get; set; }
-        public DbSet<POS_PurchaseDetail> POS_PurchaseDetails { get; set; }
-        public DbSet<POS_SalesMaster> POS_SalesMasters { get; set; }
-        public DbSet<POS_SalesDetail> POS_SalesDetails { get; set; }
-        public DbSet<POS_SalesPayment> POS_SalesPayments { get; set; }
-        public DbSet<POS_SalesPaymentMethod> POS_SalesPaymentMethods { get; set; }
+        public DbSet<POSBrand> POS_Brands { get; set; }
+        public DbSet<POSCategory> POS_Categorys { get; set; }
+        public DbSet<POSCustomer> POS_Units { get; set; }
+        public DbSet<POSProduct> POS_Products { get; set; }
+        public DbSet<POSProductBatch> POS_ProductBatchs { get; set; }
+        public DbSet<POSSupplier> POS_Suppliers { get; set; }
+        public DbSet<POSCustomer> POS_Customers { get; set; }
+        public DbSet<POSPurchaseMaster> POS_PurchaseMasters { get; set; }
+        public DbSet<POSPurchaseDetail> POS_PurchaseDetails { get; set; }
+        public DbSet<POSSalesMaster> POS_SalesMasters { get; set; }
+        public DbSet<POSSalesDetail> POS_SalesDetails { get; set; }
+        public DbSet<POSSalesPayment> POS_SalesPayments { get; set; }
+        public DbSet<POSSalesPaymentMethod> POS_SalesPaymentMethods { get; set; }
         public DbSet<POS_StockLedger> POS_StockLedgers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -44,11 +44,7 @@ namespace POS_API.Entities
 
             base.OnModelCreating(modelBuilder);
 
-
         }
-
-
-
 
     }
 }

@@ -6,36 +6,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Master
 {
-    public class POS_Product : BaseEntity
+    public class POSProduct : BaseEntity
     {
         [Required]
         [MaxLength(50)]
         public string? ProductCode { get; set; }
 
-
-
         [Required]
         [MaxLength(150)]
         public string? ProductName { get; set; }
 
-
-
         [Required]
         public long CategoryId { get; set; }
-
-
 
         [Required]
         public long BrandId { get; set; }
 
-
-
         [Required]
         public long UnitId { get; set; }
-
-
-
-
         [Column(TypeName = "decimal(18,2)")]
         public decimal PurchasePrice { get; set; }
 
@@ -54,29 +42,21 @@ namespace POS_API.Entities.Master
         [MaxLength(100)]
         public string? Barcode { get; set; }
 
-
-
-
         // Navigation Property
 
-
         [ForeignKey("CategoryId")]
-        public POS_Category? Category { get; set; }
-
-
+        public POSCategory? Category { get; set; }
 
         [ForeignKey("BrandId")]
-        public POS_Brand? Brand { get; set; }
-
-
+        public POSBrand? Brand { get; set; }
 
         [ForeignKey("UnitId")]
-        public POS_Unit? Unit { get; set; }
+        public POSCustomer? Unit { get; set; }
         public bool IsBatchRequired { get; set; }
 
-        public ICollection<POS_PurchaseDetail> PurchaseDetails { get; set; } = new List<POS_PurchaseDetail>();
+        public ICollection<POSPurchaseDetail> PurchaseDetails { get; set; } = new List<POSPurchaseDetail>();
 
-        public ICollection<POS_SalesDetail> SalesDetails { get; set; } = new List<POS_SalesDetail>();
+        public ICollection<POSSalesDetail> SalesDetails { get; set; } = new List<POSSalesDetail>();
 
         public ICollection<POS_StockLedger> StockLedgers { get; set; } = new List<POS_StockLedger>();
     }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Purchase
 {
-    public class POS_PurchaseMaster : BaseEntity
+    public class POSPurchaseMaster : BaseEntity
     {
         [Required]
         [MaxLength(50)]
@@ -28,11 +28,11 @@ namespace POS_API.Entities.Purchase
 
 
         [ForeignKey("SupplierId")]
-        public POS_Supplier? Supplier { get; set; }
+        public POSSupplier? Supplier { get; set; }
 
 
 
-        public ICollection<POS_PurchaseDetail>? Details { get; set; }
+        public ICollection<POSPurchaseDetail>? Details { get; set; }
 
     }
 }

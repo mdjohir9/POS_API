@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Sales
 {
-    public class POS_SalesMaster : BaseEntity
+    public class POSSalesMaster : BaseEntity
     {
         [Required]
         [MaxLength(50)]
@@ -38,11 +38,11 @@ namespace POS_API.Entities.Sales
 
 
         [ForeignKey("CustomerId")]
-        public POS_Customer? Customer { get; set; }
+        public POSCustomer? Customer { get; set; }
 
 
 
-        public ICollection<POS_SalesDetail>? Details { get; set; }
+        public ICollection<POSSalesDetail>? Details { get; set; }
 
     }
 }

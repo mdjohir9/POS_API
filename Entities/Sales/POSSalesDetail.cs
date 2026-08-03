@@ -2,21 +2,19 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace POS_API.Entities.Purchase
+namespace POS_API.Entities.Sales
 {
-    public class POS_PurchaseDetail
+    public class POSSalesDetail
     {
         [Key]
         public long Id { get; set; }
 
 
 
-        [Required]
-        public long PurchaseMasterId { get; set; }
+        public long SalesMasterId { get; set; }
 
 
 
-        [Required]
         public long ProductId { get; set; }
 
 
@@ -36,12 +34,12 @@ namespace POS_API.Entities.Purchase
 
 
 
-        [ForeignKey("PurchaseMasterId")]
-        public POS_PurchaseMaster? Purchase { get; set; }
+        [ForeignKey("SalesMasterId")]
+        public POSSalesMaster? Sales { get; set; }
 
 
 
         [ForeignKey("ProductId")]
-        public POS_Product? Product { get; set; }
+        public POSProduct? Product { get; set; }
     }
 }
