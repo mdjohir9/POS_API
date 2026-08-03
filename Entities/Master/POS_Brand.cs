@@ -9,6 +9,6 @@ namespace POS_API.Entities.Master
         public string? Name { get; set; }
 
 
-        public ICollection<POS_Product> Products { get; set; }
+        public ICollection<POS_Product>? Products { get; set; }
     }
 }

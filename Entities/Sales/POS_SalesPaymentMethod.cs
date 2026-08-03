@@ -1,4 +1,6 @@
-﻿namespace POS_API.Entities.Sales
+﻿using POS_API.Entities.Master;
+
+namespace POS_API.Entities.Sales
 {
     public class POS_SalesPaymentMethod :BaseEntity
     {

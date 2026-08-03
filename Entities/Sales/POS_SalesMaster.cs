@@ -42,7 +42,7 @@ namespace POS_API.Entities.Sales
 
 
 
-        public ICollection<POS_SalesDetail> Details { get; set; }
+        public ICollection<POS_SalesDetail>? Details { get; set; }
 
     }
 }

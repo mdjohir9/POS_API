@@ -72,6 +72,8 @@ namespace POS_API.Entities.Master
 
         [ForeignKey("UnitId")]
         public POS_Unit? Unit { get; set; }
+        public bool IsBatchRequired { get; set; }
+
         public ICollection<POS_PurchaseDetail> PurchaseDetails { get; set; } = new List<POS_PurchaseDetail>();
 
         public ICollection<POS_SalesDetail> SalesDetails { get; set; } = new List<POS_SalesDetail>();

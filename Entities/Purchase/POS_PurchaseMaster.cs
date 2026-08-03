@@ -32,7 +32,7 @@ namespace POS_API.Entities.Purchase
 
 
 
-        public ICollection<POS_PurchaseDetail> Details { get; set; }
+        public ICollection<POS_PurchaseDetail>? Details { get; set; }
 
     }
 }

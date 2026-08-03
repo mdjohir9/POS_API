@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace POS_API.Entities
+namespace POS_API.Entities.Master
 {
     public abstract class BaseEntity
     {
@@ -25,5 +25,9 @@ namespace POS_API.Entities
 
 
         public long? UpdatedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+
+        public long? DeletedBy { get; set; }
     }
 }
