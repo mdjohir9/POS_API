@@ -1,0 +1,47 @@
+## Ignore Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build Results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+## ASP.NET Core
+appsettings.Development.json
+
+## Logs
+*.log
+
+## NuGet
+packages/
+*.nupkg
+
+## Rider / VS Code
+.vscode/
+.idea/
+
+## Node
+node_modules/
+
+## Publish
+publish/
+
+## IIS Express
+iisexpress/
+
+## OS Files
+Thumbs.db
+Desktop.ini
+
+## macOS
+.DS_Store
+
+## Generated files
+Generated/
