@@ -36,7 +36,7 @@ namespace POS_API.Controllers
 
                 if (!_cache.TryGetValue(cacheKey, out List<POSCustomer> cachedResult))
                 {
-                    var categories = await _unitOfWork.POSCategory.GetByCompanyIdAsync(companyId);
+                    var categories = await _unitOfWork.POSCustomer.GetByCompanyIdAsync(companyId);
 
                     if (categories == null || !categories.Any())
                     {
