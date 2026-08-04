@@ -44,6 +44,12 @@ namespace POS_API.Entities
 
             base.OnModelCreating(modelBuilder);
 
+
+            modelBuilder.Entity<POSSalesDetail>()
+                .HasOne(x => x.Product)
+                .WithMany(x => x.SalesDetails)
+                .HasForeignKey(x => x.ProductId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
 
     }

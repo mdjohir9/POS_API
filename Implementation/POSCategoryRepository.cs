@@ -7,13 +7,11 @@ namespace POS_API.Implementation
     public class POSCategoryRepository : GenericRepository<POSCategory>, IPOSCategoryRepository
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly IHttpContextAccessor _httpContextAccessor;
         //private static List<PermissionRouteDTO> PermissionList = new List<PermissionRouteDTO>();
         //public List<PermissionRouteDTO> PermissionList { get; set; }
-        public POSCategoryRepository(ApplicationDbContext dbContext, IHttpContextAccessor httpContextAccessor) : base(dbContext)
+        public POSCategoryRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
-            _httpContextAccessor = httpContextAccessor;
         }
 
     }
