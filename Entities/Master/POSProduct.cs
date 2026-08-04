@@ -58,6 +58,6 @@ namespace POS_API.Entities.Master
 
         public ICollection<POSSalesDetail> SalesDetails { get; set; } = new List<POSSalesDetail>();
 
-        public ICollection<POS_StockLedger> StockLedgers { get; set; } = new List<POS_StockLedger>();
+        public ICollection<POSStockLedger> StockLedgers { get; set; } = new List<POSStockLedger>();
     }
 }
