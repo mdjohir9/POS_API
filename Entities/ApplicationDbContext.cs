@@ -32,7 +32,7 @@ namespace POS_API.Entities
         public DbSet<POSSalesDetail> POS_SalesDetails { get; set; }
         public DbSet<POSSalesPayment> POS_SalesPayments { get; set; }
         public DbSet<POSSalesPaymentMethod> POS_SalesPaymentMethods { get; set; }
-        public DbSet<POS_StockLedger> POS_StockLedgers { get; set; }
+        public DbSet<POSStockLedger> POS_StockLedgers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

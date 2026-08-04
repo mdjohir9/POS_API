@@ -2,7 +2,7 @@
 
 namespace POS_API.Entities.Inventory
 {
-    public class POS_StockLedger
+    public class POSStockLedger
     {
         public long Id { get; set; }
 
