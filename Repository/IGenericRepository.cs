@@ -9,7 +9,7 @@ namespace POS_API.Repository
         Task<IEnumerable<T>> GetByCompanyIdAsync(string CompanyId);
        // Task<IEnumerable<T>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
         Task<IEnumerable<T>> GetAllWithOutDeletedAsync();
-        Task<T> GetByIdAsync(int id);
+        Task<T> GetByIdAsync(long id);
         Task<T> GetByIdAsync(string id);
 
         Task UpdateByForeignKeyAsync<T>(Expression<Func<T, bool>> predicate, Action<T> updateAction) where T : class;
@@ -20,7 +20,7 @@ namespace POS_API.Repository
         Task UpdateAsync(T entity, string propertyName, object value);
 
         Task SoftDeleteAsync(int id, int deletedBy);
-        Task DeleteAsync(int id);
+        Task DeleteAsync(long id);
         Task<string> SaveDocumentsListsAsync(List<string> documentsBase64, string id, string companyId, string documentType);
 
     }

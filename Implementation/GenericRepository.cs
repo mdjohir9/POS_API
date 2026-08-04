@@ -38,7 +38,7 @@ namespace POS_API.Implementation
             // Assuming CompanyId is a property in your entity class
             return await _dbSet.Where(e => EF.Property<string>(e, "CompanyId") == CompanyId).ToListAsync();
         }
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(long id)
         {
             var entity = await _dbSet.FindAsync(id);
             if (entity == null)
@@ -165,7 +165,7 @@ namespace POS_API.Implementation
         }
 
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(long id)
         {
             var entitys = await _dbSet.FindAsync(id);
             if (entitys == null)
