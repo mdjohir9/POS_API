@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using POS_API.Entities.Inventory;
+using POS_API.Entities.Master;
+using POS_API.Entities.Purchase;
+using POS_API.Entities.Sales;
 
 namespace POS_API.Entities
 {
@@ -15,6 +19,20 @@ namespace POS_API.Entities
 
         public DbSet<HrdCompanyInfo> HrdCompanyInfo { get; set; }
 
+        public DbSet<POSBrand> POS_Brands { get; set; }
+        public DbSet<POSCategory> POS_Categorys { get; set; }
+        public DbSet<POSCustomer> POS_Units { get; set; }
+        public DbSet<POSProduct> POS_Products { get; set; }
+        public DbSet<POSProductBatch> POS_ProductBatchs { get; set; }
+        public DbSet<POSSupplier> POS_Suppliers { get; set; }
+        public DbSet<POSCustomer> POS_Customers { get; set; }
+        public DbSet<POSPurchaseMaster> POS_PurchaseMasters { get; set; }
+        public DbSet<POSPurchaseDetail> POS_PurchaseDetails { get; set; }
+        public DbSet<POSSalesMaster> POS_SalesMasters { get; set; }
+        public DbSet<POSSalesDetail> POS_SalesDetails { get; set; }
+        public DbSet<POSSalesPayment> POS_SalesPayments { get; set; }
+        public DbSet<POSSalesPaymentMethod> POS_SalesPaymentMethods { get; set; }
+        public DbSet<POSStockLedger> POS_StockLedgers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,11 +44,7 @@ namespace POS_API.Entities
 
             base.OnModelCreating(modelBuilder);
 
-
         }
-
-
-
 
     }
 }
