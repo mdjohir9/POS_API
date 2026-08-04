@@ -29,5 +29,9 @@ namespace POS_API.Entities.Master
 
 
         public long? DeletedBy { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string CompanyId { get; set; } = null!;
+        public virtual HrdCompanyInfo? Company { get; set; }
     }
 }

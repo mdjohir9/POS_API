@@ -1,4 +1,6 @@
-﻿namespace POS_API.Entities
+﻿using POS_API.Entities.Master;
+
+namespace POS_API.Entities
 {
     public class HrdCompanyInfo
     {
@@ -32,8 +34,6 @@
 
         public string? CompanyLogo { get; set; }
 
-        public short Id { get; set; }
-
         public string? StartCardNo { get; set; }
 
         public string? Weekend { get; set; }
@@ -55,5 +55,8 @@
         public bool? IsOdauthority { get; set; }
         public byte? Status { get; set; }
         public string? Email { get; set; }
+
+  
+        public ICollection<BaseEntity>? Entities { get; set; }
     }
 }

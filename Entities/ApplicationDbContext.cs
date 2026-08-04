@@ -50,6 +50,17 @@ namespace POS_API.Entities
                 .WithMany(x => x.SalesDetails)
                 .HasForeignKey(x => x.ProductId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<HrdCompanyInfo>().HasKey(x => x.CompanyId);
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes()
+                     .Where(x => typeof(BaseEntity).IsAssignableFrom(x.ClrType)))
+            {
+                modelBuilder.Entity(entityType.ClrType)
+                    .HasOne(typeof(HrdCompanyInfo))
+                    .WithMany()
+                    .HasForeignKey("CompanyId")
+                    .OnDelete(DeleteBehavior.Restrict);
+            }
         }
 
     }
