@@ -15,6 +15,7 @@ namespace POS_API.Repository
         IPOSProductRepository POSProduct { get; }
         IPOSProductBatchRepository POSProductBatch { get; }
         IPOSSupplierRepository POSSupplier { get; }
+        IPOSUnitRepository POSUnit { get; }
         IPOSPurchaseMasterRepository POSPurchaseMaster { get; }
         IPOSPurchaseDetailRepository POSPurchaseDetail { get; }
         IPOSSalesMasterRepository POSSalesMaster { get; }
@@ -22,6 +23,7 @@ namespace POS_API.Repository
         IPOSSalesPaymentRepository POSSalesPayment { get; }
         IPOSSalesPaymentMethodRepository POSSalesPaymentMethod { get; }
         IPOSStockLedgerRepository POSStockLedger { get; }
+      
 
         Task<IDbContextTransaction> BeginTransactionAsync();
         Task<int> Save();

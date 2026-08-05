@@ -4,12 +4,11 @@ namespace POS_API.DTO
 {
     public class CommonDTO
     {
-        [Required]
-        public long Id { get; set; }
+        public long? Id { get; set; }
         [Required]
         [MaxLength(100)]
         public string Name { get; set; } = null!;
-
+        public string? ShortName { get; set; }
         public bool IsActive { get; set; }
 
     }
