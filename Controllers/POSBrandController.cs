@@ -16,14 +16,12 @@ namespace POS_API.Controllers
         private readonly IMemoryCache _cache;
         private const int userId = 1;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public POSBrandController(IUserRepository userRepository, IMemoryCache cache, IUnitOfWork unitOfWork, ApplicationDbContext dbContext, IHttpContextAccessor httpContextAccessor)
+        public POSBrandController(IUserRepository userRepository, IMemoryCache cache, IUnitOfWork unitOfWork, ApplicationDbContext dbContext)
         {
             _userRepository = userRepository;
             _cache = cache;
             _unitOfWork = unitOfWork;
-            _httpContextAccessor = httpContextAccessor;
         }
 
 
@@ -101,7 +99,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("brand/update")]
-        public async Task<IActionResult> UpdateBrand([FromBody] CommonDTO dto)
+        public async Task<IActionResult> UpdateBrand([FromBody] CommonDTO dto, long Id)
         {
             try
             {
@@ -111,7 +109,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var brand = await _unitOfWork.POSBrand.GetByIdAsync(dto.Id);
+                var brand = await _unitOfWork.POSBrand.GetByIdAsync(Id);
 
                 if (brand == null || brand.IsDeleted)
                 {

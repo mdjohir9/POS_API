@@ -105,7 +105,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("supplier/update")]
-        public async Task<IActionResult> UpdateSupplier([FromBody] POSSupplierDTO dto)
+        public async Task<IActionResult> UpdateSupplier([FromBody] POSSupplierDTO dto, long Id)
         {
             try
             {
@@ -115,7 +115,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var supplier = await _unitOfWork.POSSupplier.GetByIdAsync(dto.Id);
+                var supplier = await _unitOfWork.POSSupplier.GetByIdAsync(Id);
 
                 if (supplier == null || supplier.IsDeleted)
                 {

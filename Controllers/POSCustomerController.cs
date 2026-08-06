@@ -103,7 +103,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("customer/update")]
-        public async Task<IActionResult> UpdateCustomer([FromBody] POSCustomerDTO dto)
+        public async Task<IActionResult> UpdateCustomer([FromBody] POSCustomerDTO dto, long Id)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var customer = await _unitOfWork.POSCustomer.GetByIdAsync(dto.Id);
+                var customer = await _unitOfWork.POSCustomer.GetByIdAsync(Id);
 
                 if (customer == null || customer.IsDeleted)
                 {

@@ -4,7 +4,6 @@ namespace POS_API.DTO
 {
     public class POSProductBatchDTO
     {
-        public long Id { get; set; }
 
         [Required]
         public long ProductId { get; set; }

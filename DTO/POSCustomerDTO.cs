@@ -4,7 +4,7 @@ namespace POS_API.DTO
 {
     public class POSCustomerDTO
     {
-        public long Id { get; set; }
+
 
         [Required]
         [MaxLength(50)]

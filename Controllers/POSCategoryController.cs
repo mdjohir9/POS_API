@@ -117,7 +117,7 @@ namespace POS_API.Controllers
         }
         [HttpPut]
         [Route("category/update")]
-        public async Task<IActionResult> UpdateCategory([FromBody] CommonDTO dto)
+        public async Task<IActionResult> UpdateCategory([FromBody] CommonDTO dto, long Id)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var category = await _unitOfWork.POSCategory.GetByIdAsync(dto.Id);
+                var category = await _unitOfWork.POSCategory.GetByIdAsync(Id);
 
                 if (category == null || category.IsDeleted)
                 {

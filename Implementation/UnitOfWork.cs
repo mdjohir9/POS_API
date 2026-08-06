@@ -27,7 +27,7 @@ namespace POS_API.Implementation
             User = new UserRepository(_dbContext, _httpContextAccessor);
             UserRole = new UserRoleRepository(_dbContext);
             Login = new LoginRepository(_dbContext, _configuration);
-            POSBrand = new POSBrandRepository(_dbContext, _httpContextAccessor);
+            POSBrand = new POSBrandRepository(_dbContext);
             POSCategory = new POSCategoryRepository(_dbContext);
             POSCustomer = new POSCustomerRepository(_dbContext, _httpContextAccessor);
             POSSupplier = new POSSupplierRepository(_dbContext, _httpContextAccessor);

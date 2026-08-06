@@ -115,7 +115,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("product/update")]
-        public async Task<IActionResult> UpdateProduct([FromBody] POSProductDTO dto)
+        public async Task<IActionResult> UpdateProduct([FromBody] POSProductDTO dto, long Id)
         {
             try
             {
@@ -125,7 +125,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var product = await _unitOfWork.POSProduct.GetByIdAsync(dto.Id);
+                var product = await _unitOfWork.POSProduct.GetByIdAsync(Id);
 
                 if (product == null || product.IsDeleted)
                 {

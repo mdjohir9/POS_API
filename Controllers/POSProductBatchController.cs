@@ -111,7 +111,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("productbatch/update")]
-        public async Task<IActionResult> UpdateProductBatch([FromBody] POSProductBatchDTO dto)
+        public async Task<IActionResult> UpdateProductBatch([FromBody] POSProductBatchDTO dto, long Id)
         {
             try
             {
@@ -121,7 +121,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var batch = await _unitOfWork.POSProductBatch.GetByIdAsync(dto.Id);
+                var batch = await _unitOfWork.POSProductBatch.GetByIdAsync(Id);
 
                 if (batch == null || batch.IsDeleted)
                 {
