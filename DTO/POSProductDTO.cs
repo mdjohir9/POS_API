@@ -17,6 +17,7 @@ namespace POS_API.DTO
         [Required]
         public long CategoryId { get; set; }
 
+        public long? CompanyId { get; set; }
         [Required]
         public long BrandId { get; set; }
 

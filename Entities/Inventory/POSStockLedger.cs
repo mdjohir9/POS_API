@@ -1,9 +1,12 @@
 ﻿using POS_API.Entities.Master;
+using System.ComponentModel.DataAnnotations;
 
 namespace POS_API.Entities.Inventory
 {
     public class POSStockLedger
     {
+        [Key]
+        [Required]
         public long Id { get; set; }
 
         public DateTime TransactionDate { get; set; }

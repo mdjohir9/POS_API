@@ -5,11 +5,30 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Master
 {
-    public class POSProductBatch:BaseEntity
+    public class POSProductBatch
     {
+        [Key]
+        [Required]
+        public long Id { get; set; }
+        public long? CompanyId { get; set; }
+
+        public bool IsActive { get; set; } = true;
+
+        public bool IsDeleted { get; set; } = false;
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+        public long? CreatedBy { get; set; }
+
+        public DateTime? UpdatedAt { get; set; }
+
+        public long? UpdatedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+        public long? DeletedBy { get; set; }
         [Required]
         public long ProductId { get; set; }
-
         [ForeignKey(nameof(ProductId))]
         public POSProduct? Product { get; set; }
 

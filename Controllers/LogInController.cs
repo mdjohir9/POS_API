@@ -191,7 +191,7 @@ namespace POS_API.Controllers
                     DataAccessPermission = null,
                     IsActive = true,
                     CreatedAt = DateTime.Now,
-                    CompanyId = "1111"
+                    CompanyId = 1
                 };
 
                 // Save user with exception handling for unique constraint violation

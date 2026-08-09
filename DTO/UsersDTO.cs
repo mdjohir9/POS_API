@@ -40,6 +40,6 @@ namespace POS_API.DTO
         public int? DataAccessLevel { get; set; }
         public string? DataAccessPermission { get; set; }
         public Boolean? IsActive { get; set; }
-        public string? CompanyId { get; set; }
+        public long? CompanyId { get; set; }
     }
 }

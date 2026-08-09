@@ -6,15 +6,12 @@ namespace POS_API.Entities.Purchase
 {
     public class POSPurchaseDetail
     {
+        [Required]
         [Key]
         public long Id { get; set; }
 
-
-
         [Required]
         public long PurchaseMasterId { get; set; }
-
-
 
         [Required]
         public long ProductId { get; set; }

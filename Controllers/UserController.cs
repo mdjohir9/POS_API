@@ -50,7 +50,7 @@ namespace POS_API.Controllers
 
         [HttpGet]
         [Route("UserNameAndId")]
-        public async Task<IActionResult> GetUserIdAndName(string companyId, int? userId, int dataAccessLevel)
+        public async Task<IActionResult> GetUserIdAndName(long companyId, int? userId, int dataAccessLevel)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace POS_API.Controllers
 
         [HttpGet]
         [Route("users")]
-        public async Task<IActionResult> GetUsers(string companyId, bool IsAdministrator)
+        public async Task<IActionResult> GetUsers(long companyId, bool IsAdministrator)
         {
             try
             {
@@ -243,7 +243,7 @@ namespace POS_API.Controllers
                     IsActive = usersDTO.IsActive,
                     CreatedAt = DateTime.Now,
                     CreatedBy = userId,  // Ensure you have a way to set the userId
-                    CompanyId = "1111"
+                    CompanyId = 1
                 };
 
                 // Add the new user and save changes
@@ -370,7 +370,7 @@ namespace POS_API.Controllers
                 existingUser.IsActive = usersDTO.IsActive;
                 existingUser.UpdatedAt = DateTime.Now;
                 existingUser.UpdatedBy = id;
-                existingUser.CompanyId = "1111";
+                existingUser.CompanyId = 1;
 
                 await _unitOfWork.User.UpdateAsync(existingUser);
                 await _unitOfWork.Save();

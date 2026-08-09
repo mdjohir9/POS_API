@@ -19,7 +19,7 @@ namespace POS_API.Implementation
         }
 
 
-        public async Task<IEnumerable<object>> GetUserIdAndNameAsync(string companyId, int? userId, int dataAccessLevel)
+        public async Task<IEnumerable<object>> GetUserIdAndNameAsync(long companyId, int? userId, int dataAccessLevel)
         {
             var query = from user in _dbContext.Users
                         join role in _dbContext.UserRole on user.UserRoleID equals role.UserRoleId
@@ -279,7 +279,7 @@ namespace POS_API.Implementation
 
 
 
-        public async Task<IEnumerable<UsersDTO>> GetAllUsersAsync(string companyId, bool IsAdministrator)
+        public async Task<IEnumerable<UsersDTO>> GetAllUsersAsync(long companyId, bool IsAdministrator)
         {
             var request = _httpContextAccessor.HttpContext.Request;
             var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";

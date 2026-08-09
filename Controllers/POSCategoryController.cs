@@ -92,7 +92,6 @@ namespace POS_API.Controllers
                     IsActive = dto.IsActive,
                     CreatedAt = DateTime.Now,
                     CreatedBy = userId,
-                    CompanyId = "1111"
                 };
 
                 await _unitOfWork.POSCategory.AddAsync(category);

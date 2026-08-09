@@ -73,7 +73,7 @@ namespace POS_API.Controllers
                     IsActive = dto.IsActive,
                     CreatedAt = DateTime.Now,
                     CreatedBy = userId,
-                    CompanyId = "1111"
+                    CompanyId = 1
                 };
 
                 await _unitOfWork.POSBrand.AddAsync(brand);
@@ -148,7 +148,7 @@ namespace POS_API.Controllers
 
         [HttpDelete]
         [Route("Brand/delete/{id}")]
-        public async Task<IActionResult> DeleteBrand(int id)
+        public async Task<IActionResult> DeleteBrand(long id)
         {
             try
             {

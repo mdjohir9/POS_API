@@ -5,6 +5,7 @@ using POS_API.DTO;
 using POS_API.Entities;
 using POS_API.Entities.Master;
 using POS_API.Repository;
+using System.ComponentModel.Design;
 
 namespace POS_API.Controllers
 {
@@ -85,7 +86,7 @@ namespace POS_API.Controllers
                     IsActive = dto.IsActive,
                     CreatedAt = DateTime.Now,
                     CreatedBy = userId,
-                    CompanyId = "1111"
+                    CompanyId = 1
                 };
 
                 await _unitOfWork.POSProductBatch.AddAsync(batch);

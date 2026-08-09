@@ -6,8 +6,34 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Master
 {
-    public class POSProduct : BaseEntity
+    public class POSProduct 
     {
+        [Key]
+        [Required]
+        public long Id { get; set; }
+
+        public long? CompanyId { get; set; }
+        public bool IsActive { get; set; } = true;
+
+
+        public bool IsDeleted { get; set; } = false;
+
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+
+        public long? CreatedBy { get; set; }
+
+
+        public DateTime? UpdatedAt { get; set; }
+
+
+        public long? UpdatedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+
+        public long? DeletedBy { get; set; }
         [Required]
         [MaxLength(50)]
         public string? ProductCode { get; set; }
