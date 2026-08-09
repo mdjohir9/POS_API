@@ -12,8 +12,8 @@ using POS_API.Entities;
 namespace POS_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260804061107_company_id_add_on_every_table")]
-    partial class company_id_add_on_every_table
+    [Migration("20260809095726_initial-db")]
+    partial class initialdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
