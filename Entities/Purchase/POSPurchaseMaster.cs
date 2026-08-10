@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Purchase
 {
+    [SoftDelete]
     public class POSPurchaseMaster 
     {
         [Key]
