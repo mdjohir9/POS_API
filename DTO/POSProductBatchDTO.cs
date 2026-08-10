@@ -6,8 +6,8 @@ namespace POS_API.DTO
     {
 
         [Required]
-        public long ProductId { get; set; }
-        public long? CompanyId { get; set; }
+        public int ProductId { get; set; }
+        public int? CompanyId { get; set; }
         [Required]
         [MaxLength(50)]
         public string BatchNo { get; set; } = string.Empty;

@@ -102,7 +102,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("unit/update")]
-        public async Task<IActionResult> UpdateUnit([FromBody] CommonDTO dto,long Id)
+        public async Task<IActionResult> UpdateUnit([FromBody] CommonDTO dto,int Id)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace POS_API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var brand = await _unitOfWork.POSBrand.GetByIdAsync(Id);
+                var brand = await _unitOfWork.POSUnit.GetByIdAsync(Id);
 
                 if (brand == null || brand.IsDeleted)
                 {
@@ -128,7 +128,7 @@ namespace POS_API.Controllers
                 brand.UpdatedAt = DateTime.Now;
                 brand.UpdatedBy = userId;
 
-                _unitOfWork.POSBrand.UpdateAsync(brand);
+                _unitOfWork.POSUnit.UpdateAsync(brand);
                 await _unitOfWork.Save();
 
                 _cache.Remove("unit");

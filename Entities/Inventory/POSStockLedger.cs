@@ -7,15 +7,15 @@ namespace POS_API.Entities.Inventory
     {
         [Key]
         [Required]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         public DateTime TransactionDate { get; set; }
 
-        public long ProductId { get; set; }
+        public int ProductId { get; set; }
 
         public string ReferenceType { get; set; } = string.Empty;
 
-        public long ReferenceId { get; set; }
+        public int ReferenceId { get; set; }
 
         public decimal InQuantity { get; set; }
 

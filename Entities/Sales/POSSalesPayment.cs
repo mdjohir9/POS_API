@@ -6,11 +6,11 @@ namespace POS_API.Entities.Sales
     {
         [Key]
         [Required]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
-        public long SalesMasterId { get; set; }
+        public int SalesMasterId { get; set; }
 
-        public long PaymentMethodId { get; set; }
+        public int PaymentMethodId { get; set; }
 
         public decimal Amount { get; set; }
 

@@ -6,7 +6,7 @@ namespace POS_API.Entities.Master
     {
         [Required]
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [MaxLength(100)]
         public string? Name { get; set; }
@@ -21,17 +21,17 @@ namespace POS_API.Entities.Master
         public DateTime CreatedAt { get; set; }
 
 
-        public long? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
 
 
         public DateTime? UpdatedAt { get; set; }
 
 
-        public long? UpdatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
         public DateTime? DeletedAt { get; set; }
 
 
-        public long? DeletedBy { get; set; }
+        public int? DeletedBy { get; set; }
 
 
         public ICollection<POSProduct>? Products { get; set; }

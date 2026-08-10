@@ -103,7 +103,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("customer/update")]
-        public async Task<IActionResult> UpdateCustomer([FromBody] POSCustomerDTO dto, long Id)
+        public async Task<IActionResult> UpdateCustomer([FromBody] POSCustomerDTO dto, int Id)
         {
             try
             {
@@ -146,7 +146,7 @@ namespace POS_API.Controllers
 
         [HttpDelete]
         [Route("customer/delete/{id}")]
-        public async Task<IActionResult> DeleteCustomer(long id)
+        public async Task<IActionResult> DeleteCustomer(int id)
         {
             try
             {

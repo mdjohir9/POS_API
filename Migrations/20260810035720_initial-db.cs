@@ -19,16 +19,16 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     CompanyType = table.Column<bool>(type: "bit", nullable: true),
                     HeadOfficeId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -66,18 +66,18 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true)
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -89,17 +89,17 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true)
+                    DeletedBy = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -111,21 +111,21 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     CustomerCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CustomerName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: true),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true)
+                    CompanyId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -137,16 +137,16 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -159,17 +159,17 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     SupplierCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     SupplierName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
@@ -185,17 +185,17 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ShortName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true)
                 },
@@ -237,7 +237,7 @@ namespace POS_API.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -271,19 +271,19 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     InvoiceNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     SalesDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CustomerId = table.Column<long>(type: "bigint", nullable: false),
+                    CustomerId = table.Column<int>(type: "int", nullable: false),
                     GrossAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DiscountAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     NetAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
@@ -305,19 +305,19 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     PurchaseNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     PurchaseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SupplierId = table.Column<long>(type: "bigint", nullable: false),
+                    SupplierId = table.Column<int>(type: "int", nullable: false),
                     TotalAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
@@ -337,28 +337,28 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
                     ProductCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ProductName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
-                    CategoryId = table.Column<long>(type: "bigint", nullable: false),
-                    BrandId = table.Column<long>(type: "bigint", nullable: false),
-                    UnitId = table.Column<long>(type: "bigint", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    BrandId = table.Column<int>(type: "int", nullable: false),
+                    UnitId = table.Column<int>(type: "int", nullable: false),
                     PurchasePrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SalesPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     VATPercent = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Barcode = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     IsBatchRequired = table.Column<bool>(type: "bit", nullable: false),
-                    POSUnitId = table.Column<long>(type: "bigint", nullable: true)
+                    POSUnitId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -397,12 +397,12 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SalesMasterId = table.Column<long>(type: "bigint", nullable: false),
-                    PaymentMethodId = table.Column<long>(type: "bigint", nullable: false),
+                    SalesMasterId = table.Column<int>(type: "int", nullable: false),
+                    PaymentMethodId = table.Column<int>(type: "int", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SalesId = table.Column<long>(type: "bigint", nullable: false)
+                    SalesId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -428,18 +428,18 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyId = table.Column<long>(type: "bigint", nullable: true),
+                    CompanyId = table.Column<int>(type: "int", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedBy = table.Column<long>(type: "bigint", nullable: true),
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedBy = table.Column<long>(type: "bigint", nullable: true),
-                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    DeletedBy = table.Column<int>(type: "int", nullable: true),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     BatchNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LotNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     ManufacturingDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -466,12 +466,12 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TransactionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     ReferenceType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ReferenceId = table.Column<long>(type: "bigint", nullable: false),
+                    ReferenceId = table.Column<int>(type: "int", nullable: false),
                     InQuantity = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     OutQuantity = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     BalanceQuantity = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
@@ -493,14 +493,14 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PurchaseMasterId = table.Column<long>(type: "bigint", nullable: false),
-                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    PurchaseMasterId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<decimal>(type: "decimal(18,3)", nullable: false),
                     Rate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    POSProductBatchId = table.Column<long>(type: "bigint", nullable: true)
+                    POSProductBatchId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -532,15 +532,15 @@ namespace POS_API.Migrations
                 schema: "dbo",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SalesMasterId = table.Column<long>(type: "bigint", nullable: false),
-                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    SalesMasterId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<decimal>(type: "decimal(18,3)", nullable: false),
                     Rate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    POSProductBatchId = table.Column<long>(type: "bigint", nullable: true),
-                    POSProductId = table.Column<long>(type: "bigint", nullable: true)
+                    POSProductBatchId = table.Column<int>(type: "int", nullable: true),
+                    POSProductId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

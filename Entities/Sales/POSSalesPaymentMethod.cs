@@ -7,7 +7,7 @@ namespace POS_API.Entities.Sales
     {
         [Required]
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
 
         public bool IsActive { get; set; } = true;
@@ -20,17 +20,17 @@ namespace POS_API.Entities.Sales
         public DateTime CreatedAt { get; set; }
 
 
-        public long? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
 
 
         public DateTime? UpdatedAt { get; set; }
 
 
-        public long? UpdatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
         public DateTime? DeletedAt { get; set; }
 
 
-        public long? DeletedBy { get; set; }
+        public int? DeletedBy { get; set; }
         public string Name { get; set; } = string.Empty;
 
         public ICollection<POSSalesPayment> Payments { get; set; } = new List<POSSalesPayment>();

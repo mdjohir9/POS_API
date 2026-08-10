@@ -8,13 +8,13 @@ namespace POS_API.Entities.Purchase
     {
         [Required]
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public long PurchaseMasterId { get; set; }
+        public int PurchaseMasterId { get; set; }
 
         [Required]
-        public long ProductId { get; set; }
+        public int ProductId { get; set; }
 
 
 

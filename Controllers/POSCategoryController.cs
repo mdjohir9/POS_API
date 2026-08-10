@@ -116,7 +116,7 @@ namespace POS_API.Controllers
         }
         [HttpPut]
         [Route("category/update")]
-        public async Task<IActionResult> UpdateCategory([FromBody] CommonDTO dto, long Id)
+        public async Task<IActionResult> UpdateCategory([FromBody] CommonDTO dto, int Id)
         {
             try
             {
@@ -165,7 +165,7 @@ namespace POS_API.Controllers
 
         [HttpDelete]
         [Route("category/delete/{id}")]
-        public async Task<IActionResult> DeleteCategory(long id)
+        public async Task<IActionResult> DeleteCategory(int id)
         {
             try
             {

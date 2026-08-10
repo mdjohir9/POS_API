@@ -8,11 +8,11 @@ namespace POS_API.Entities.Sales
     {
         [Key]
         [Required]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
-        public long SalesMasterId { get; set; }
+        public int SalesMasterId { get; set; }
 
-        public long ProductId { get; set; }
+        public int ProductId { get; set; }
 
         [Column(TypeName = "decimal(18,3)")]
         public decimal Quantity { get; set; }

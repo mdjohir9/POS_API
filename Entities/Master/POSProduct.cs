@@ -10,9 +10,9 @@ namespace POS_API.Entities.Master
     {
         [Key]
         [Required]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
-        public long? CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         public bool IsActive { get; set; } = true;
 
 
@@ -23,17 +23,17 @@ namespace POS_API.Entities.Master
         public DateTime CreatedAt { get; set; }
 
 
-        public long? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
 
 
         public DateTime? UpdatedAt { get; set; }
 
 
-        public long? UpdatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
         public DateTime? DeletedAt { get; set; }
 
 
-        public long? DeletedBy { get; set; }
+        public int? DeletedBy { get; set; }
         [Required]
         [MaxLength(50)]
         public string? ProductCode { get; set; }
@@ -43,13 +43,13 @@ namespace POS_API.Entities.Master
         public string? ProductName { get; set; }
 
         [Required]
-        public long CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
         [Required]
-        public long BrandId { get; set; }
+        public int BrandId { get; set; }
 
         [Required]
-        public long UnitId { get; set; }
+        public int UnitId { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal PurchasePrice { get; set; }
 

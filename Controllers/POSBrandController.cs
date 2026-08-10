@@ -99,7 +99,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("brand/update")]
-        public async Task<IActionResult> UpdateBrand([FromBody] CommonDTO dto, long Id)
+        public async Task<IActionResult> UpdateBrand([FromBody] CommonDTO dto, int Id)
         {
             try
             {
@@ -148,12 +148,12 @@ namespace POS_API.Controllers
 
         [HttpDelete]
         [Route("Brand/delete/{id}")]
-        public async Task<IActionResult> DeleteBrand(long id)
+        public async Task<IActionResult> DeleteBrand(int id)
         {
             try
             {
                 // Assuming the user ID of the person performing the delete is stored in the claims
-                await _unitOfWork.User.DeleteAsync(id);
+                await _unitOfWork.POSBrand.DeleteAsync(id);
                 await _unitOfWork.Save();
                 string cacheKey = $"users";
                 string cacheKeyID = $"user{id}";

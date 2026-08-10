@@ -8,7 +8,7 @@ namespace POS_API.Entities.Sales
     {
         [Key]
         [Required]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         public bool IsActive { get; set; } = true;
         public bool IsDeleted { get; set; } = false;
@@ -16,13 +16,13 @@ namespace POS_API.Entities.Sales
         [Required]
         public DateTime CreatedAt { get; set; }
 
-        public long? CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
-        public long? UpdatedBy { get; set; }
+        public int? UpdatedBy { get; set; }
 
         public DateTime? DeletedAt { get; set; }
-        public long? DeletedBy { get; set; }
+        public int? DeletedBy { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -31,7 +31,7 @@ namespace POS_API.Entities.Sales
         [Required]
         public DateTime SalesDate { get; set; }
 
-        public long CustomerId { get; set; }
+        public int CustomerId { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal GrossAmount { get; set; }

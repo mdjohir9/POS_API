@@ -15,14 +15,14 @@ namespace POS_API.DTO
         public string ProductName { get; set; } = string.Empty;
 
         [Required]
-        public long CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
-        public long? CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         [Required]
-        public long BrandId { get; set; }
+        public int BrandId { get; set; }
 
         [Required]
-        public long UnitId { get; set; }
+        public int UnitId { get; set; }
 
         public decimal PurchasePrice { get; set; }
 

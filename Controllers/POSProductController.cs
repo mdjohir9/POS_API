@@ -115,7 +115,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("product/update")]
-        public async Task<IActionResult> UpdateProduct([FromBody] POSProductDTO dto, long Id)
+        public async Task<IActionResult> UpdateProduct([FromBody] POSProductDTO dto, int Id)
         {
             try
             {
@@ -173,7 +173,7 @@ namespace POS_API.Controllers
 
         [HttpDelete]
         [Route("product/delete/{id}")]
-        public async Task<IActionResult> DeleteProduct(long id)
+        public async Task<IActionResult> DeleteProduct(int id)
         {
             try
             {

@@ -12,7 +12,7 @@ using POS_API.Entities;
 namespace POS_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260809184807_initial-db")]
+    [Migration("20260810035720_initial-db")]
     partial class initialdb
     {
         /// <inheritdoc />
@@ -28,11 +28,11 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.HrdCompanyInfo", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -73,8 +73,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<string>("DefaultCurrency")
                         .HasColumnType("nvarchar(max)");
@@ -82,8 +82,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -130,8 +130,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.Property<string>("Weekend")
                         .HasColumnType("nvarchar(max)");
@@ -143,11 +143,11 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Inventory.POSStockLedger", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("BalanceQuantity")
                         .HasColumnType("decimal(18,2)");
@@ -158,11 +158,11 @@ namespace POS_API.Migrations
                     b.Property<decimal>("OutQuantity")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("ReferenceId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ReferenceId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ReferenceType")
                         .IsRequired()
@@ -180,26 +180,26 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSBrand", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -215,8 +215,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -225,23 +225,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSCategory", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -257,8 +257,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -267,24 +267,24 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSCustomer", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<string>("CustomerCode")
                         .IsRequired()
@@ -299,8 +299,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -315,8 +315,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -325,36 +325,36 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSProduct", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Barcode")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<long>("BrandId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("CategoryId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -365,8 +365,8 @@ namespace POS_API.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<long?>("POSUnitId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("POSUnitId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ProductCode")
                         .IsRequired()
@@ -384,14 +384,14 @@ namespace POS_API.Migrations
                     b.Property<decimal>("SalesPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("UnitId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("UnitId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("VATPercent")
                         .HasColumnType("decimal(5,2)");
@@ -411,11 +411,11 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSProductBatch", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("AvailableQty")
                         .HasColumnType("decimal(18,2)");
@@ -425,20 +425,20 @@ namespace POS_API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ExpiryDate")
                         .HasColumnType("datetime2");
@@ -456,8 +456,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("ManufacturingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("PurchasePrice")
                         .HasColumnType("decimal(18,2)");
@@ -471,8 +471,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -483,30 +483,30 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSSupplier", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -531,8 +531,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -541,26 +541,26 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Master.POSUnit", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -580,8 +580,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -590,23 +590,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Purchase.POSPurchaseDetail", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long?>("POSProductBatchId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("POSProductBatchId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("PurchaseMasterId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("PurchaseMasterId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Quantity")
                         .HasColumnType("decimal(18,3)");
@@ -627,23 +627,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Purchase.POSPurchaseMaster", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -659,8 +659,8 @@ namespace POS_API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<long>("SupplierId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
@@ -668,8 +668,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -680,23 +680,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Sales.POSSalesDetail", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long?>("POSProductBatchId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("POSProductBatchId")
+                        .HasColumnType("int");
 
-                    b.Property<long?>("POSProductId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("POSProductId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("ProductId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Quantity")
                         .HasColumnType("decimal(18,3)");
@@ -704,8 +704,8 @@ namespace POS_API.Migrations
                     b.Property<decimal>("Rate")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("SalesMasterId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("SalesMasterId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -722,26 +722,26 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Sales.POSSalesMaster", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
-                    b.Property<long>("CustomerId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("DiscountAmount")
                         .HasColumnType("decimal(18,2)");
@@ -769,8 +769,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -781,23 +781,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Sales.POSSalesPayment", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("PaymentMethodId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("PaymentMethodId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("SalesId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("SalesId")
+                        .HasColumnType("int");
 
-                    b.Property<long>("SalesMasterId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("SalesMasterId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -810,23 +810,23 @@ namespace POS_API.Migrations
 
             modelBuilder.Entity("POS_API.Entities.Sales.POSSalesPaymentMethod", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CreatedBy")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("DeletedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("DeletedBy")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -841,8 +841,8 @@ namespace POS_API.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<long?>("UpdatedBy")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -860,8 +860,8 @@ namespace POS_API.Migrations
                     b.Property<string>("AdditionalPermissions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("CompanyId")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
