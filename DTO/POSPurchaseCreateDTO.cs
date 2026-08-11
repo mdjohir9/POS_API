@@ -9,7 +9,8 @@ namespace POS_API.DTO
 
         [Required]
         public DateTime PurchaseDate { get; set; }
-
+        [Required]
+        public int CompanyId { get; set; }
         [Required]
         public int SupplierId { get; set; }
 
