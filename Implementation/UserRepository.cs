@@ -118,35 +118,51 @@ namespace POS_API.Implementation
                     icon = "appstore-add",
                     submenu = new List<object>()
                 });
+
+                //    menu.Add(new
+                //    {
+                //        path = "",
+                //        title = "About Me",
+                //        iconType = "nzIcon",
+                //        iconTheme = "outline",
+                //        icon = "user",
+                //        submenu = new List<object>
+                //{
+                //    new { path = "custommer/add", title = "Add Personnel Info", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                //    new  { path = "custommer/profile",  title = "My Profile",   iconType = "",  icon = "", iconTheme = "",  submenu = new List<object>() },
+                //        }
+                //    });
                 menu.Add(new
                 {
                     path = "",
-                    title = "About Me",
+                    title = "Sales",
                     iconType = "nzIcon",
                     iconTheme = "outline",
-                    icon = "user",
+                    icon = "shopping-cart",
                     submenu = new List<object>
-            {
-                new { path = "custommer/add", title = "Add Personnel Info", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new  { path = "custommer/profile",  title = "My Profile",   iconType = "",  icon = "", iconTheme = "",  submenu = new List<object>() },
+                    {
+                        new
+                        {
+                            path = "sales/add",
+                            title = "New Sales",
+                            iconType = "nzIcon",
+                            icon = "plus-circle",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        },
+                        new
+                        {
+                            path = "sales/list",
+                            title = "Sales List",
+                            iconType = "nzIcon",
+                            icon = "unordered-list",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        }
                     }
                 });
                 // Wallet
-                menu.Add(new
-                {
-                    path = "",
-                    title = "Wallet",
-                    iconType = "nzIcon",
-                    iconTheme = "outline",
-                    icon = "wallet",
-                    submenu = new List<object>
-            {
-                new { path = "wallet/recharge", title = "Recharge", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/all-recharge", title = "Recharge List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/withdraw", title = "Withdraw", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/withdraw-bye-customer", title = "Withdraw List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-            }
-                });
+
 
                 // Custommer
 
@@ -183,33 +199,34 @@ namespace POS_API.Implementation
                 menu.Add(new
                 {
                     path = "",
-                    title = "Custommer",
+                    title = "Sales",
                     iconType = "nzIcon",
                     iconTheme = "outline",
-                    icon = "user",
+                    icon = "shopping-cart",
                     submenu = new List<object>
-            {
-                new { path = "custommer/add", title = "Add-Custommer", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "custommer/list", title = "Custommer List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() }
-            }
+                    {
+                        new
+                        {
+                            path = "sales/product-sales",
+                            title = "New Sales",
+                            iconType = "nzIcon",
+                            icon = "plus-circle",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        },
+                        new
+                        {
+                            path = "sales/product-sales-list",
+                            title = "Sales List",
+                            iconType = "nzIcon",
+                            icon = "unordered-list",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        }
+                    }
                 });
 
-                menu.Add(new
-                {
-                    path = "",
-                    title = "Wallet",
-                    iconType = "nzIcon",
-                    iconTheme = "outline",
-                    icon = "wallet",
-                    submenu = new List<object>
-            {
-                new { path = "wallet/recharge", title = "Recharge", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/recharge-requests", title = "Recharge List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/withdraw", title = "Withdraw", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "wallet/all-withdraw", title = "Withdraw List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
 
-            }
-                });
 
                 menu.Add(new
                 {

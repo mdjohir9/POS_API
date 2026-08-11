@@ -41,6 +41,7 @@ namespace POS_API.Entities.Purchase
         public int SupplierId { get; set; }
 
 
+        public int? CompanyId { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal TotalAmount { get; set; }
