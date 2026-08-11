@@ -11,6 +11,7 @@ namespace POS_API.Entities.Sales
         public int SalesMasterId { get; set; }
 
         public int PaymentMethodId { get; set; }
+        public int? CompanyId { get; set; }
 
         public decimal Amount { get; set; }
 
