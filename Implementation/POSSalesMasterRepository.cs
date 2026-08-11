@@ -1,4 +1,8 @@
-﻿using POS_API.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using POS_API.DTO;
+using POS_API.Entities;
+using POS_API.Entities.Inventory;
+using POS_API.Entities.Purchase;
 using POS_API.Entities.Sales;
 using POS_API.Repository;
 
@@ -14,5 +18,7 @@ namespace POS_API.Implementation
             _dbContext = dbContext;
             _httpContextAccessor = httpContextAccessor;
         }
+
+        
     }
 }
