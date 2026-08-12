@@ -1,4 +1,6 @@
-﻿using POS_API.Entities.Sales;
+﻿using POS_API.DTO;
+using POS_API.Entities.Purchase;
+using POS_API.Entities.Sales;
 
 namespace POS_API.Repository
 {

@@ -28,7 +28,7 @@ namespace POS_API.Entities.Sales
 
         public int? UpdatedBy { get; set; }
         public DateTime? DeletedAt { get; set; }
-
+        public int? CompanyId { get; set; }
 
         public int? DeletedBy { get; set; }
         public string Name { get; set; } = string.Empty;

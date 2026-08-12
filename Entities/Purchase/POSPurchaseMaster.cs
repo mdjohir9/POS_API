@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace POS_API.Entities.Purchase
 {
+    [SoftDelete]
     public class POSPurchaseMaster 
     {
         [Key]
@@ -40,6 +41,7 @@ namespace POS_API.Entities.Purchase
         public int SupplierId { get; set; }
 
 
+        public int? CompanyId { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal TotalAmount { get; set; }

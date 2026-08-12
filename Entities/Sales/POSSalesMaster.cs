@@ -47,5 +47,6 @@ namespace POS_API.Entities.Sales
 
         public ICollection<POSSalesDetail> Details { get; set; }
             = new List<POSSalesDetail>();
+        public ICollection<POSSalesPayment> Payments { get; set; } = new List<POSSalesPayment>();
     }
 }
