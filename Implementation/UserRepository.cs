@@ -161,28 +161,7 @@ namespace POS_API.Implementation
                         }
                     }
                 });
-                // Wallet
 
-
-                // Custommer
-
-
-                // Loan
-                menu.Add(new
-                {
-                    path = "",
-                    title = "Loan",
-                    iconType = "nzIcon",
-                    iconTheme = "outline",
-                    icon = "stock",
-                    submenu = new List<object>
-            {
-                new { path = "/loan/loan-Application", title = "Loan Application", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/customer-loan-request", title = "Application List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/customer-loan-list", title = "Loan List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/instalment", title = "Instalments", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() }
-            }
-                });
             }
             if (dataAccessLevel == 3)
             {
@@ -225,38 +204,60 @@ namespace POS_API.Implementation
                         }
                     }
                 });
-
-
-
                 menu.Add(new
                 {
                     path = "",
-                    title = "Plans",
+                    title = "Inventory",
                     iconType = "nzIcon",
                     iconTheme = "outline",
-                    icon = "bar-chart",
+                    icon = "database",
                     submenu = new List<object>
-            {
-                new { path = "/plans/loan-plans", title = "Add-Plan", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/plans/loan-plan-list", title = "Plan List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() }
-            }
+                    {
+                        new
+                        {
+                            path = "inventory/product-purchase",
+                            title = "New Purchase",
+                            iconType = "nzIcon",
+                            icon = "plus-circle",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        },
+                        new
+                        {
+                            path = "inventory/product-purchase-list",
+                            title = "Purchase List",
+                            iconType = "nzIcon",
+                            icon = "unordered-list",
+                            iconTheme = "outline",
+                            submenu = new List<object>()
+                        }
+                    }
                 });
-
                 menu.Add(new
                 {
-                    path = "",
-                    title = "Loan",
+                    path = "customers/pos-customer",
+                    title = "Customers",
                     iconType = "nzIcon",
                     iconTheme = "outline",
-                    icon = "stock",
-                    submenu = new List<object>
-            {
-                new { path = "/loan/loan-Application", title = "Loan Application", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/loan-request-list", title = "Loan Application List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/all-instalmets", title = "Upcoming Instalments", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "/loan/loan-list", title = "Loan List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() }
-            }
+                    icon = "user",
+                    submenu = new List<object>()
                 });
+
+            //    menu.Add(new
+            //    {
+            //        path = "",
+            //        title = "Plans",
+            //        iconType = "nzIcon",
+            //        iconTheme = "outline",
+            //        icon = "bar-chart",
+            //        submenu = new List<object>
+            //{
+            //    new { path = "/plans/loan-plans", title = "Add-Plan", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+            //    new { path = "/plans/loan-plan-list", title = "Plan List", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() }
+            //}
+            //    });
+
+               
 
                 menu.Add(new
                 {
@@ -266,11 +267,14 @@ namespace POS_API.Implementation
                     iconTheme = "outline",
                     icon = "setting",
                     submenu = new List<object>
-            {
-                new { path = "settings/company", title = "Company", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "settings/paymentMethod", title = "Payment Method", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-                new { path = "settings/recharge-accounts", title = "Recharge Account", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
-            }
+                    {
+                        new { path = "settings/company", title = "Company", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                        new { path = "settings/brand", title = "Brand", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                        new { path = "settings/category", title = "Category", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                        new { path = "settings/product", title = "Product", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                        new { path = "settings/batch", title = "Batch", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+
+                    }
                 });
 
                 menu.Add(new
