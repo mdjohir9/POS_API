@@ -33,7 +33,7 @@ namespace POS_API.Controllers
                 string cacheKey = "paymentMethods";
                 if (!_cache.TryGetValue(cacheKey, out List<POSSalesPaymentMethod> cachedResult))
                 {
-                    var users = await _unitOfWork.POSSalesPayment.GetByCompanyIdAsync(companyId);
+                    var users = await _unitOfWork.POSSalesPaymentMethod.GetByCompanyIdAsync(companyId);
                     if (users == null || !users.Any())
                     {
                         return NotFound(new { StatusCode = 404, message = "Users not found!." });
