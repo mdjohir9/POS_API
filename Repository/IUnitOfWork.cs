@@ -9,6 +9,21 @@ namespace POS_API.Repository
         IUserRepository User { get; }
         IUserRoleRepository UserRole { get; }
         ILoginRepository Login { get; }
+        IPOSBrandRepository POSBrand { get; }
+        IPOSCategoryRepository POSCategory { get; }
+        IPOSCustomerRepository POSCustomer { get; }
+        IPOSProductRepository POSProduct { get; }
+        IPOSProductBatchRepository POSProductBatch { get; }
+        IPOSSupplierRepository POSSupplier { get; }
+        IPOSUnitRepository POSUnit { get; }
+        IPOSPurchaseMasterRepository POSPurchaseMaster { get; }
+        IPOSPurchaseDetailRepository POSPurchaseDetail { get; }
+        IPOSSalesMasterRepository POSSalesMaster { get; }
+        IPOSSalesDetailRepository POSSalesDetail { get; }
+        IPOSSalesPaymentRepository POSSalesPayment { get; }
+        IPOSSalesPaymentMethodRepository POSSalesPaymentMethod { get; }
+        IPOSStockLedgerRepository POSStockLedger { get; }
+      
 
         Task<IDbContextTransaction> BeginTransactionAsync();
         Task<int> Save();

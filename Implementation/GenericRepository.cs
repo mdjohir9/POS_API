@@ -164,7 +164,34 @@ namespace POS_API.Implementation
             _dbSet.Update(entity);
         }
 
+        public async Task SoftDeleteAsync(long id, int deletedBy)
+        {
+            var entity = await _dbSet.FindAsync(id);
+            if (entity == null)
+            {
+                throw new KeyNotFoundException("Entity not found.");
+            }
 
+            var propertyInfo = entity.GetType().GetProperty("Deleted");
+            if (propertyInfo != null)
+            {
+                propertyInfo.SetValue(entity, true);
+            }
+
+            var deletedByProperty = entity.GetType().GetProperty("DeletedBy");
+            if (deletedByProperty != null)
+            {
+                deletedByProperty.SetValue(entity, deletedBy);
+            }
+
+            var deletedAtProperty = entity.GetType().GetProperty("DeletedAt");
+            if (deletedAtProperty != null)
+            {
+                deletedAtProperty.SetValue(entity, DateTime.Now);
+            }
+
+            _dbSet.Update(entity);
+        }
         public async Task DeleteAsync(int id)
         {
             var entitys = await _dbSet.FindAsync(id);

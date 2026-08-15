@@ -3,7 +3,7 @@
     public class LoginInfoDTO
     {
         public int UserId { get; set; }
-        public string? CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         public string? CompanyName { get; set; }
         public byte? Status { get; set; }
         public string? Name { get; set; }

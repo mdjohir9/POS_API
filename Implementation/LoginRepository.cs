@@ -38,7 +38,7 @@ namespace POS_API.Implementation
         {
             var companyDetails = (from user in _dbContext.Users
                                   join company in _dbContext.HrdCompanyInfo
-                                  on user.CompanyId equals company.CompanyId
+                                  on user.CompanyId equals company.Id
                                   where user.UserId == userId
                                   select new CompanyStatusDTO
                                   {

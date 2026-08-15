@@ -1,9 +1,34 @@
-﻿namespace POS_API.Entities
+﻿using POS_API.Entities.Master;
+using System.ComponentModel.DataAnnotations;
+
+namespace POS_API.Entities
 {
     public class HrdCompanyInfo
     {
-        public string CompanyId { get; set; } = null!;
+        [Key]
+        [Required]
+        public int Id { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
+
+        public bool IsDeleted { get; set; } = false;
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+
+        public int? CreatedBy { get; set; }
+
+
+        public DateTime? UpdatedAt { get; set; }
+
+
+        public int? UpdatedBy { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+
+        public int? DeletedBy { get; set; }
         public bool? CompanyType { get; set; }
 
         public string? HeadOfficeId { get; set; }
@@ -32,8 +57,6 @@
 
         public string? CompanyLogo { get; set; }
 
-        public short Id { get; set; }
-
         public string? StartCardNo { get; set; }
 
         public string? Weekend { get; set; }
@@ -55,5 +78,6 @@
         public bool? IsOdauthority { get; set; }
         public byte? Status { get; set; }
         public string? Email { get; set; }
-    }
+
+      }
 }

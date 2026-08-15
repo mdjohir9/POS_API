@@ -27,6 +27,20 @@ namespace POS_API.Implementation
             User = new UserRepository(_dbContext, _httpContextAccessor);
             UserRole = new UserRoleRepository(_dbContext);
             Login = new LoginRepository(_dbContext, _configuration);
+            POSBrand = new POSBrandRepository(_dbContext,_httpContextAccessor);
+            POSCategory = new POSCategoryRepository(_dbContext);
+            POSCustomer = new POSCustomerRepository(_dbContext, _httpContextAccessor);
+            POSSupplier = new POSSupplierRepository(_dbContext, _httpContextAccessor);
+            POSProduct = new POSProductRepository(_dbContext, _httpContextAccessor);
+            POSProductBatch = new POSProductBatchRepository(_dbContext, _httpContextAccessor);
+            POSPurchaseMaster = new POSPurchaseMasterRepository(_dbContext,_httpContextAccessor);
+            POSPurchaseDetail = new POSPurchaseDetailRepository(_dbContext,_httpContextAccessor);
+            POSSalesMaster = new POSSalesMasterRepository(_dbContext,_httpContextAccessor);
+            POSSalesDetail = new POSSalesDetailRepository(_dbContext ,_httpContextAccessor);
+            POSSalesPayment = new POSSalesPaymentRepository(_dbContext, _httpContextAccessor);
+            POSSalesPaymentMethod = new POSSalesPaymentMethodRepository(_dbContext, _httpContextAccessor);
+            POSStockLedger = new POSStockLedgerRepository(_dbContext, _httpContextAccessor);
+            POSUnit = new POSUnitRepository(_dbContext, _httpContextAccessor);
 
         }
 
@@ -35,6 +49,21 @@ namespace POS_API.Implementation
         public IUserRoleRepository UserRole { get; private set; }
    
         public ILoginRepository Login { get; private set; }
+        public IPOSBrandRepository POSBrand { get; private set; }
+        public IPOSCategoryRepository POSCategory { get; private set; }
+        public IPOSCustomerRepository POSCustomer { get; private set; }
+        public IPOSProductRepository POSProduct { get; private set; }
+        public IPOSProductBatchRepository POSProductBatch { get; private set; }
+        public IPOSUnitRepository POSUnit { get; private set; }
+        public IPOSSupplierRepository POSSupplier { get; private set; }
+        public IPOSPurchaseMasterRepository POSPurchaseMaster { get; private set; }
+        public IPOSPurchaseDetailRepository POSPurchaseDetail { get; private set; }
+        public IPOSSalesMasterRepository POSSalesMaster { get; private set; }
+        public IPOSSalesDetailRepository POSSalesDetail { get; private set; }
+        public IPOSSalesPaymentRepository POSSalesPayment { get; private set; }
+        public IPOSSalesPaymentMethodRepository POSSalesPaymentMethod { get; private set; }
+        public IPOSStockLedgerRepository POSStockLedger { get; private set; }
+
 
         public async Task<IDbContextTransaction> BeginTransactionAsync()
         {

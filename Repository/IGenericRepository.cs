@@ -20,6 +20,7 @@ namespace POS_API.Repository
         Task UpdateAsync(T entity, string propertyName, object value);
 
         Task SoftDeleteAsync(int id, int deletedBy);
+
         Task DeleteAsync(int id);
         Task<string> SaveDocumentsListsAsync(List<string> documentsBase64, string id, string companyId, string documentType);
 

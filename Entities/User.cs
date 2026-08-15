@@ -9,7 +9,7 @@ namespace POS_API.Entities
         [Required]
         [Key]
         public int UserId { get; set; }
-        public string? CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         [Column(TypeName = "nvarchar(100)")]
         [MaxLength(100, ErrorMessage = "Please insert FirstName value less than 100 characters.")]
         public string? FirstName { get; set; }
