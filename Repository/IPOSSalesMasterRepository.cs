@@ -6,5 +6,7 @@ namespace POS_API.Repository
 {
     public interface IPOSSalesMasterRepository: IGenericRepository<POSSalesMaster>
     {
+        Task<IEnumerable<POSSalesListDTO>> GetSalesListAsync();
+
     }
 }

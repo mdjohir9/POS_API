@@ -61,6 +61,51 @@ namespace POS_API.Controllers
                 });
             }
         }
+        [HttpGet]
+        [Route("product/barcode")]
+        public async Task<IActionResult> GetProductByBarcode(int companyId, string barcode)
+        {
+            try
+            {
+
+
+                if (string.IsNullOrWhiteSpace(barcode))
+                {
+                    return BadRequest(new
+                    {
+                        StatusCode = 400,
+                        message = "Barcode is required."
+                    });
+                }
+
+                var product = await _unitOfWork.POSProduct
+                    .GetByBarcodeAsync(companyId, barcode.Trim());
+
+                if (product == null)
+                {
+                    return NotFound(new
+                    {
+                        StatusCode = 404,
+                        message = "Product not found."
+                    });
+                }
+
+                return Ok(new
+                {
+                    StatusCode = 200,
+                    message = "Success",
+                    data = product
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    message = ex.Message
+                });
+            }
+        }
 
         [HttpPost]
         [Route("product/create")]

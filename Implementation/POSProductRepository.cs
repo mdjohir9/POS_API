@@ -1,4 +1,5 @@
-﻿using POS_API.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using POS_API.Entities;
 using POS_API.Entities.Master;
 using POS_API.Repository;
 
@@ -13,6 +14,10 @@ namespace POS_API.Implementation
         {
             _dbContext = dbContext;
             _httpContextAccessor = httpContextAccessor;
+        }
+        public async Task<POSProduct?> GetByBarcodeAsync(int companyId, string barcode)
+        {
+            return await _dbContext.POS_Products.FirstOrDefaultAsync(x => x.CompanyId == companyId && x.Barcode == barcode);
         }
 
     }
