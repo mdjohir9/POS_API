@@ -27,30 +27,51 @@ namespace POS_API.Controllers
             _cache = cache;
             _unitOfWork = unitOfWork;
         }
-
         [HttpGet]
-        [Route("Purchases")]
-        public async Task<IActionResult> GetPurchases(string companyId)
+        [Route("Purchase")]
+        public async Task<IActionResult> GetPurchasesById(string companyId)
         {
             try
             {
-                string cacheKey = "Purchases";
+                string cacheKey = $"Purchases_{companyId}";
 
-                if (!_cache.TryGetValue(cacheKey, out List<POSPurchaseMaster> cachedResult))
+                if (!_cache.TryGetValue(
+                    cacheKey,
+                    out IEnumerable<POSPurchaseMaster> cachedResult))
                 {
-                    var Purchases = await _unitOfWork.POSPurchaseMaster.GetByCompanyIdAsync(companyId);
+                    var purchases =
+                        await _unitOfWork.POSPurchaseMaster
+                            .GetPurchasesFromViewAsync(companyId);
 
-                    if (Purchases == null || !Purchases.Any())
+                    if (purchases == null || !purchases.Any())
                     {
-                        return NotFound(new { StatusCode = 404, message = "customers not found." });
+                        return NotFound(new
+                        {
+                            StatusCode = 404,
+                            message = "Purchases not found."
+                        });
                     }
 
-                    _cache.Set(cacheKey, Purchases, TimeSpan.FromMinutes(1));
+                    _cache.Set(
+                        cacheKey,
+                        purchases,
+                        TimeSpan.FromMinutes(1)
+                    );
 
-                    return Ok(new { StatusCode = 200, message = "Success", data = Purchases });
+                    return Ok(new
+                    {
+                        StatusCode = 200,
+                        message = "Success",
+                        data = purchases
+                    });
                 }
-                return Ok(new { StatusCode = 200, message = "Success", data = cachedResult });
 
+                return Ok(new
+                {
+                    StatusCode = 200,
+                    message = "Success",
+                    data = cachedResult
+                });
             }
             catch (Exception ex)
             {
@@ -61,6 +82,40 @@ namespace POS_API.Controllers
                 });
             }
         }
+
+        //[HttpGet]
+        //[Route("Purchases")]
+        //public async Task<IActionResult> GetPurchases(string companyId)
+        //{
+        //    try
+        //    {
+        //        string cacheKey = "Purchases";
+
+        //        if (!_cache.TryGetValue(cacheKey, out List<POSPurchaseMaster> cachedResult))
+        //        {
+        //            var Purchases = await _unitOfWork.POSPurchaseMaster.GetByCompanyIdAsync(companyId);
+
+        //            if (Purchases == null || !Purchases.Any())
+        //            {
+        //                return NotFound(new { StatusCode = 404, message = "customers not found." });
+        //            }
+
+        //            _cache.Set(cacheKey, Purchases, TimeSpan.FromMinutes(1));
+
+        //            return Ok(new { StatusCode = 200, message = "Success", data = Purchases });
+        //        }
+        //        return Ok(new { StatusCode = 200, message = "Success", data = cachedResult });
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, new
+        //        {
+        //            StatusCode = 500,
+        //            message = ex.Message
+        //        });
+        //    }
+        //}
         [HttpPost]
         [Route("purchase/create")]
         public async Task<IActionResult> CreatePurchase( [FromBody] POSPurchaseCreateDTO dto)
@@ -96,6 +151,7 @@ namespace POS_API.Controllers
                     PurchaseNo = dto.PurchaseNo,
                     PurchaseDate = dto.PurchaseDate,
                     SupplierId = dto.SupplierId,
+                    CompanyId=1,
 
                     TotalAmount = totalAmount,
 

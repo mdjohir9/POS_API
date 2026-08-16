@@ -1,9 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dapper;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using POS_API.DTO;
 using POS_API.Entities;
 using POS_API.Entities.Inventory;
 using POS_API.Entities.Purchase;
 using POS_API.Repository;
+using System.Data;
 
 namespace POS_API.Implementation
 {
@@ -11,11 +15,14 @@ namespace POS_API.Implementation
     {
         private readonly ApplicationDbContext _dbContext;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public POSPurchaseMasterRepository(ApplicationDbContext dbContext, IHttpContextAccessor httpContextAccessor) : base(dbContext)
+        public POSPurchaseMasterRepository(ApplicationDbContext dbContext, IHttpContextAccessor httpContextAccessor, IConfiguration configuration) : base(dbContext)
         {
             _dbContext = dbContext;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
+
         }
 
         public async Task<POSPurchaseCreateResultDTO> CreatePurchaseAsync(POSPurchaseMaster purchaseMaster, List<POSPurchaseDetail> details)
@@ -59,6 +66,29 @@ namespace POS_API.Implementation
                 await transaction.RollbackAsync();
                 throw;
             }
+        }
+
+        public async Task<IEnumerable<POSPurchaseViewDto>> GetPurchasesFromViewAsync( string companyId)
+        {
+            var connectionString = _configuration.GetConnectionString(
+                "DbConnection"
+            );
+
+            using IDbConnection connection =
+                new SqlConnection(connectionString);
+
+            const string sql = @"
+            SELECT *
+            FROM dbo.vw_POSPurchaseDetails
+            WHERE CompanyId = @CompanyId
+            ORDER BY Id DESC";
+
+            return await connection.QueryAsync<POSPurchaseViewDto>(
+                sql,
+                new
+                {
+                    CompanyId = companyId
+                });
         }
     }
 }
