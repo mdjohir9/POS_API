@@ -153,6 +153,7 @@ namespace POS_API.Controllers
                     GrossAmount = salesMaster.GrossAmount,
                     DiscountAmount = salesMaster.DiscountAmount,
                     NetAmount = salesMaster.NetAmount
+                    
                 });
             }
             catch (Exception ex)
