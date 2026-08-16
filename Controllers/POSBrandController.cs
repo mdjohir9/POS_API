@@ -24,6 +24,34 @@ namespace POS_API.Controllers
             _unitOfWork = unitOfWork;
         }
 
+        [HttpGet]
+        [Route("brand")]
+        public async Task<IActionResult> GetBrand(int Id)
+        {
+            try
+            {
+                string cacheKey = "users";
+                if (!_cache.TryGetValue(cacheKey, out List<POSBrand> cachedResult))
+                {
+                    var users = await _unitOfWork.POSBrand.GetByIdAsync(Id);
+                    if (users == null)
+                    {
+                        return NotFound(new { StatusCode = 404, message = "Users not found!." });
+                    }
+
+                    _cache.Set(cacheKey, users, TimeSpan.FromMinutes(1));
+                    return Ok(new { StatusCode = 200, message = "Success", data = users });
+                }
+                else
+                {
+                    return Ok(new { StatusCode = 200, message = "Success", data = cachedResult });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { StatusCode = 500, message = "An error occurred", error = ex.Message });
+            }
+        }
 
         [HttpGet]
         [Route("brands")]
@@ -57,7 +85,7 @@ namespace POS_API.Controllers
 
         [HttpPost]
         [Route("brand/create")]
-        public async Task<IActionResult> CreateBrand([FromBody] CommonDTO dto)
+        public async Task<IActionResult> CreateBrand([FromBody] POSBrandDTO dto)
         {
             try
             {
@@ -99,7 +127,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("brand/update")]
-        public async Task<IActionResult> UpdateBrand([FromBody] CommonDTO dto, int Id)
+        public async Task<IActionResult> UpdateBrand([FromBody] POSBrandDTO dto, int Id)
         {
             try
             {
@@ -147,7 +175,7 @@ namespace POS_API.Controllers
         }
 
         [HttpDelete]
-        [Route("Brand/delete/{id}")]
+        [Route("brand/delete/{id}")]
         public async Task<IActionResult> DeleteBrand(int id)
         {
             try
