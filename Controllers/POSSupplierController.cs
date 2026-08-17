@@ -104,7 +104,7 @@ namespace POS_API.Controllers
         }
 
         [HttpPut]
-        [Route("supplier/update")]
+        [Route("supplier/update/{id}")]
         public async Task<IActionResult> UpdateSupplier([FromBody] POSSupplierDTO dto, int Id)
         {
             try

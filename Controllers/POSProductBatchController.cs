@@ -111,7 +111,7 @@ namespace POS_API.Controllers
         }
 
         [HttpPut]
-        [Route("productbatch/update")]
+        [Route("productbatch/update/{id}")]
         public async Task<IActionResult> UpdateProductBatch([FromBody] POSProductBatchDTO dto, int Id)
         {
             try

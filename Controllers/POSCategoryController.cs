@@ -116,7 +116,7 @@ namespace POS_API.Controllers
             }
         }
         [HttpPut]
-        [Route("category/update")]
+        [Route("category/update/{id}")]
         public async Task<IActionResult> UpdateCategory([FromBody] CommonDTO dto, int Id)
         {
             try

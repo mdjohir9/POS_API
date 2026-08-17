@@ -126,7 +126,7 @@ namespace POS_API.Controllers
         }
 
         [HttpPut]
-        [Route("brand/update")]
+        [Route("brand/update/{id}")]
         public async Task<IActionResult> UpdateBrand([FromBody] POSBrandDTO dto, int Id)
         {
             try
