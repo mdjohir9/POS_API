@@ -102,6 +102,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("unit/update/{id}")]
+
         public async Task<IActionResult> UpdateUnit([FromBody] CommonDTO dto,int Id)
         {
             try
