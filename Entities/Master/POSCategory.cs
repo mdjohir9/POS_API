@@ -33,7 +33,7 @@ namespace POS_API.Entities.Master
 
         public int? DeletedBy { get; set; }
 
-
+        public int? CompanyId { get; set; }
         public ICollection<POSProduct>? Products { get; set; }
     }
 }
