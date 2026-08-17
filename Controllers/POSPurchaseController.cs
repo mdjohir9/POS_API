@@ -151,7 +151,6 @@ namespace POS_API.Controllers
                     PurchaseNo = dto.PurchaseNo,
                     PurchaseDate = dto.PurchaseDate,
                     SupplierId = dto.SupplierId,
-                    CompanyId=1,
 
                     TotalAmount = totalAmount,
 
