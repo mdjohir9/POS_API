@@ -8,6 +8,7 @@ using POS_API.Entities.Inventory;
 using POS_API.Entities.Master;
 using POS_API.Entities.Purchase;
 using POS_API.Repository;
+using System.ComponentModel.Design;
 
 namespace POS_API.Controllers
 {
@@ -150,12 +151,12 @@ namespace POS_API.Controllers
                     PurchaseNo = dto.PurchaseNo,
                     PurchaseDate = dto.PurchaseDate,
                     SupplierId = dto.SupplierId,
-                    CompanyId=1,
 
                     TotalAmount = totalAmount,
 
                     IsActive = true,
                     IsDeleted = false,
+                    CompanyId= dto.CompanyId,
 
                     CreatedAt = DateTime.Now,
                     CreatedBy = userId
