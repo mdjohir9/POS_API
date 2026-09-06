@@ -27,6 +27,39 @@ namespace POS_API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("product/{Id}")]
+        public async Task<IActionResult> GetProducts(int Id)
+        {
+            try
+            {
+                string cacheKey = "products";
+
+                if (!_cache.TryGetValue(cacheKey, out List<POSProduct> cachedResult))
+                {
+                    var products = await _unitOfWork.POSProduct.GetByIdAsync(Id);
+
+                    if (products == null)
+                    {
+                        return NotFound(new { StatusCode = 404, message = "products not found." });
+                    }
+
+                    _cache.Set(cacheKey, products, TimeSpan.FromMinutes(1));
+
+                    return Ok(new { StatusCode = 200, message = "Success", data = products });
+                }
+                return Ok(new { StatusCode = 200, message = "Success", data = cachedResult });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    message = ex.Message
+                });
+            }
+        }
 
         [HttpGet]
         [Route("products")]

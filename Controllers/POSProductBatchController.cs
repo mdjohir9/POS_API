@@ -26,14 +26,41 @@ namespace POS_API.Controllers
             _unitOfWork = unitOfWork;
             _httpContextAccessor = httpContextAccessor;
         }
-
         [HttpGet]
-        [Route("ProductBatch")]
+        [Route("batch/{Id}")]
+        public async Task<IActionResult> GetBatch(int Id)
+        {
+            try
+            {
+                string cacheKey = $"batchs{Id}";
+                if (!_cache.TryGetValue(cacheKey, out List<POSProductBatch> cachedResult))
+                {
+                    var users = await _unitOfWork.POSProductBatch.GetByIdAsync(Id);
+                    if (users == null)
+                    {
+                        return NotFound(new { StatusCode = 404, message = "batchs not found!." });
+                    }
+
+                    _cache.Set(cacheKey, users, TimeSpan.FromMinutes(1));
+                    return Ok(new { StatusCode = 200, message = "Success", data = users });
+                }
+                else
+                {
+                    return Ok(new { StatusCode = 200, message = "Success", data = cachedResult });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { StatusCode = 500, message = "An error occurred", error = ex.Message });
+            }
+        }
+        [HttpGet]
+        [Route("batchs")]
         public async Task<IActionResult> GetProductBatch(string companyId)
         {
             try
             {
-                string cacheKey = "products";
+                string cacheKey = "batchs";
 
                 if (!_cache.TryGetValue(cacheKey, out List<POSProductBatch> cachedResult))
                 {
@@ -41,7 +68,7 @@ namespace POS_API.Controllers
 
                     if (products == null || !products.Any())
                     {
-                        return NotFound(new { StatusCode = 404, message = "customers not found." });
+                        return NotFound(new { StatusCode = 404, message = "batchs not found." });
                     }
 
                     _cache.Set(cacheKey, products, TimeSpan.FromMinutes(1));
@@ -61,7 +88,7 @@ namespace POS_API.Controllers
             }
         }
         [HttpPost]
-        [Route("productbatch/create")]
+        [Route("batch/create")]
         public async Task<IActionResult> CreateProductBatch([FromBody] POSProductBatchDTO dto)
         {
             try
@@ -92,7 +119,7 @@ namespace POS_API.Controllers
                 await _unitOfWork.POSProductBatch.AddAsync(batch);
                 await _unitOfWork.Save();
 
-                _cache.Remove("productbatches");
+                _cache.Remove("batchs");
 
                 return Ok(new
                 {
@@ -111,7 +138,7 @@ namespace POS_API.Controllers
         }
 
         [HttpPut]
-        [Route("productbatch/update/{id}")]
+        [Route("batch/update/{id}")]
         public async Task<IActionResult> UpdateProductBatch([FromBody] POSProductBatchDTO dto, int Id)
         {
             try
@@ -149,7 +176,7 @@ namespace POS_API.Controllers
                 _unitOfWork.POSProductBatch.UpdateAsync(batch);
                 await _unitOfWork.Save();
 
-                _cache.Remove("productbatches");
+                _cache.Remove("batchs");
 
                 return Ok(new
                 {
@@ -168,7 +195,7 @@ namespace POS_API.Controllers
         }
 
         [HttpDelete]
-        [Route("productbatch/delete/{id}")]
+        [Route("batch/delete/{id}")]
         public async Task<IActionResult> DeleteProductBatch(int id)
         {
             try
@@ -176,8 +203,8 @@ namespace POS_API.Controllers
                 await _unitOfWork.POSProductBatch.DeleteAsync(id);
                 await _unitOfWork.Save();
 
-                _cache.Remove("productbatches");
-                _cache.Remove($"productbatch{id}");
+                _cache.Remove("batchs");
+                _cache.Remove($"batchs{id}");
 
                 return Ok(new
                 {

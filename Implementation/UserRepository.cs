@@ -268,7 +268,7 @@ namespace POS_API.Implementation
                     icon = "setting",
                     submenu = new List<object>
                     {
-                        new { path = "settings/company", title = "Company", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
+                        //new { path = "settings/company", title = "Company", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
                         new { path = "settings/brand", title = "Brand", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
                         new { path = "settings/category", title = "Category", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
                         new { path = "settings/product", title = "Product", iconType = "", icon = "", iconTheme = "", submenu = new List<object>() },
