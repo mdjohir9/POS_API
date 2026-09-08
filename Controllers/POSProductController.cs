@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using POS_API.DTO;
 using POS_API.Entities;
@@ -147,7 +148,11 @@ namespace POS_API.Controllers
             try
             {
                 if (dto == null)
-                    return BadRequest(new { StatusCode = 400, Message = "Invalid Request." });
+                    return BadRequest(new
+                    {
+                        StatusCode = 400,
+                        Message = "Invalid Request."
+                    });
 
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
@@ -179,6 +184,23 @@ namespace POS_API.Controllers
                 {
                     StatusCode = 200,
                     Message = "Product Created Successfully."
+                });
+            }
+            catch (DbUpdateException ex)
+            {
+                if (ex.InnerException?.Message.Contains("IX_POS_Products_Barcode") == true)
+                {
+                    return Conflict(new
+                    {
+                        StatusCode = 409,
+                        Message = "The product already exists with this barcode."
+                    });
+                }
+
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    Message = ex.InnerException?.Message ?? ex.Message
                 });
             }
             catch (Exception ex)
