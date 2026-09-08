@@ -24,6 +24,39 @@ namespace POS_API.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpGet]
+        [Route("sales/invoice/{Id}")]
+        public async Task<IActionResult> GetSalesInvoice(int Id)
+        {
+            try
+            {
+                var sales = await _unitOfWork.POSSalesMaster.GetSalesInvoiceAsync(Id);
+
+                if (sales == null )
+                {
+                    return NotFound(new
+                    {
+                        StatusCode = 404,
+                        Message = "Sales not found."
+                    });
+                }
+
+                return Ok(new
+                {
+                    StatusCode = 200,
+                    Message = "Success",
+                    Data = sales
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                });
+            }
+        }
+        [HttpGet]
         [Route("sales")]
         public async Task<IActionResult> GetSalesList()
         {

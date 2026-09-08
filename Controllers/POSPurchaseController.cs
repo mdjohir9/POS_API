@@ -93,9 +93,7 @@ namespace POS_API.Controllers
                     cacheKey,
                     out IEnumerable<POSPurchaseMaster> cachedResult))
                 {
-                    var purchases =
-                        await _unitOfWork.POSPurchaseMaster
-                            .GetPurchasesFromViewAsync(companyId);
+                    var purchases =  await _unitOfWork.POSPurchaseMaster.GetPurchasesFromViewAsync(companyId);
 
                     if (purchases == null || !purchases.Any())
                     {

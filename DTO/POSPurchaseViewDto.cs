@@ -12,5 +12,6 @@ namespace POS_API.DTO
         public DateTime PurchaseDate { get; set; }
         public decimal TotalAmount { get; set; }
         public string? ProductNames { get; set; }
+        public string? Barcode { get; set; }
     }
 }

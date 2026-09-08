@@ -1,4 +1,5 @@
-﻿using POS_API.Entities.Inventory;
+﻿using Microsoft.EntityFrameworkCore;
+using POS_API.Entities.Inventory;
 using POS_API.Entities.Purchase;
 using POS_API.Entities.Sales;
 using System.ComponentModel.DataAnnotations;
@@ -66,6 +67,7 @@ namespace POS_API.Entities.Master
 
 
         [MaxLength(100)]
+        [Required]
         public string? Barcode { get; set; }
 
         // Navigation Property

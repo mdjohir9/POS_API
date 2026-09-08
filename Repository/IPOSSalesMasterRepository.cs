@@ -7,6 +7,7 @@ namespace POS_API.Repository
     public interface IPOSSalesMasterRepository: IGenericRepository<POSSalesMaster>
     {
         Task<IEnumerable<POSSalesListDTO>> GetSalesListAsync();
-
+        //Task<IEnumerable<POSSalesInvoiceDTO>> GetSalesInvoiceAsync(int salesMasterId);
+        Task<POSSalesInvoiceDTO?> GetSalesInvoiceAsync(int salesMasterId);
     }
 }

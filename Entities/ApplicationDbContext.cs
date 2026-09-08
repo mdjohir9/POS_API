@@ -58,6 +58,8 @@ namespace POS_API.Entities
                 .WithMany()
                 .HasForeignKey(x => x.ProductId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<POSProduct>().HasIndex(x => x.Barcode).IsUnique();
         }
     }
 }
