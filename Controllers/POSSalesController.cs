@@ -57,6 +57,31 @@ namespace POS_API.Controllers
             }
         }
         [HttpGet]
+        [Route("dashboard/summary")]
+        public async Task<IActionResult> GetDashboardSummary(int CompanyId)
+        {
+            try
+            {
+
+                var result = await _unitOfWork.POSSalesMaster.GetDashboardSummaryAsync(CompanyId);
+
+                return Ok(new
+                {
+                    StatusCode = 200,
+                    Message = "Success",
+                    Data = result
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                });
+            }
+        }
+        [HttpGet]
         [Route("sales")]
         public async Task<IActionResult> GetSalesList()
         {
