@@ -58,12 +58,12 @@ namespace POS_API.Controllers
         }
         [HttpGet]
         [Route("dashboard/summary")]
-        public async Task<IActionResult> GetDashboardSummary(int CompanyId)
+        public async Task<IActionResult> GetDashboardSummary(int CompanyId, DateTime Date)
         {
             try
             {
 
-                var result = await _unitOfWork.POSSalesMaster.GetDashboardSummaryAsync(CompanyId);
+                var result = await _unitOfWork.POSSalesMaster.GetDashboardSummaryAsync(CompanyId , Date);
 
                 return Ok(new
                 {

@@ -135,9 +135,9 @@ namespace POS_API.Implementation
         }
 
 
-        public async Task<POSDashboardSummaryDTO> GetDashboardSummaryAsync(int companyId)
+        public async Task<POSDashboardSummaryDTO> GetDashboardSummaryAsync(int companyId, DateTime date)
         {
-            var today = DateTime.Today;
+            var today = date;
             var tomorrow = today.AddDays(1);
             var yesterday = today.AddDays(-1);
 
