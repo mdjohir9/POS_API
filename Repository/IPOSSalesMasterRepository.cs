@@ -10,5 +10,7 @@ namespace POS_API.Repository
         //Task<IEnumerable<POSSalesInvoiceDTO>> GetSalesInvoiceAsync(int salesMasterId);
         Task<POSSalesInvoiceDTO?> GetSalesInvoiceAsync(int salesMasterId);
         Task<POSDashboardSummaryDTO> GetDashboardSummaryAsync(int companyId, DateTime date);
+        Task<SalesPurchaseSummaryDTO> GetSalesPurchaseSummaryAsync(string companyId, int year);
+        Task<StockInOutSummaryDTO> GetStockInOutSummaryAsync(string companyId, DateTime selectedDate);
     }
 }

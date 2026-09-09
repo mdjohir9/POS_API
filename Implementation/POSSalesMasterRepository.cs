@@ -140,10 +140,6 @@ namespace POS_API.Implementation
             var today = date;
             var tomorrow = today.AddDays(1);
             var yesterday = today.AddDays(-1);
-
-            // =========================================================
-            // TODAY'S SALES
-            // =========================================================
             var todaySales = await _dbContext.POS_SalesMasters
                 .AsNoTracking()
                 .Where(x =>
@@ -152,11 +148,6 @@ namespace POS_API.Implementation
                     x.SalesDate >= today &&
                     x.SalesDate < tomorrow)
                 .SumAsync(x => (decimal?)x.NetAmount) ?? 0;
-
-
-            // =========================================================
-            // YESTERDAY'S SALES
-            // =========================================================
             var yesterdaySales = await _dbContext.POS_SalesMasters
                 .AsNoTracking()
                 .Where(x =>
@@ -175,11 +166,6 @@ namespace POS_API.Implementation
                 salesGrowth =
                     ((todaySales - yesterdaySales) / yesterdaySales) * 100;
             }
-
-
-            // =========================================================
-            // TODAY'S PURCHASE
-            // =========================================================
             var todayPurchase = await _dbContext.POS_PurchaseMasters
                 .AsNoTracking()
                 .Where(x =>
@@ -189,10 +175,6 @@ namespace POS_API.Implementation
                     x.PurchaseDate < tomorrow)
                 .SumAsync(x => (decimal?)x.TotalAmount) ?? 0;
 
-
-            // =========================================================
-            // YESTERDAY'S PURCHASE
-            // =========================================================
             var yesterdayPurchase = await _dbContext.POS_PurchaseMasters
                 .AsNoTracking()
                 .Where(x =>
@@ -212,10 +194,6 @@ namespace POS_API.Implementation
                     ((todayPurchase - yesterdayPurchase) / yesterdayPurchase) * 100;
             }
 
-
-            // =========================================================
-            // TODAY'S PROFIT
-            // =========================================================
             var todayProfit = await _dbContext.POS_SalesDetails
                 .AsNoTracking()
                 .Where(x =>
@@ -236,10 +214,6 @@ namespace POS_API.Implementation
                     )
                 ) ?? 0;
 
-
-            // =========================================================
-            // YESTERDAY'S PROFIT
-            // =========================================================
             var yesterdayProfit = await _dbContext.POS_SalesDetails
                 .AsNoTracking()
                 .Where(x =>
@@ -271,10 +245,6 @@ namespace POS_API.Implementation
                     / Math.Abs(yesterdayProfit)) * 100;
             }
 
-
-            // =========================================================
-            // LOW STOCK ITEMS
-            // =========================================================
             var lowStockItems = await _dbContext.POS_StockLedgers
                 .AsNoTracking()
                 .GroupBy(x => x.ProductId)
@@ -307,15 +277,8 @@ namespace POS_API.Implementation
                 .CountAsync(x =>
                     x.CurrentStock <= x.MinimumStock);
 
-
-            // =========================================================
-            // FINAL DASHBOARD RESULT
-            // =========================================================
             var result = new POSDashboardSummaryDTO
             {
-                // -----------------------------------------------------
-                // SALES
-                // -----------------------------------------------------
                 Sales = new POSDashboardCardDTO
                 {
                     Value = Math.Round(todaySales, 2),
@@ -328,11 +291,6 @@ namespace POS_API.Implementation
 
                     Message = "Compared to yesterday"
                 },
-
-
-                // -----------------------------------------------------
-                // PURCHASE
-                // -----------------------------------------------------
                 Purchase = new POSDashboardCardDTO
                 {
                     Value = Math.Round(todayPurchase, 2),
@@ -346,10 +304,6 @@ namespace POS_API.Implementation
                     Message = "Compared to yesterday"
                 },
 
-
-                // -----------------------------------------------------
-                // PROFIT
-                // -----------------------------------------------------
                 Profit = new POSDashboardCardDTO
                 {
                     Value = Math.Round(todayProfit, 2),
@@ -362,16 +316,110 @@ namespace POS_API.Implementation
 
                     Message = "Compared to yesterday"
                 },
-
-
-                // -----------------------------------------------------
-                // LOW STOCK
-                // -----------------------------------------------------
                 LowStockItems = lowStockItems
             };
 
             return result;
         }
-    }
+
+
+        public async Task<SalesPurchaseSummaryDTO> GetSalesPurchaseSummaryAsync(string companyId, int year)
+        {
+            var startDate = new DateTime(year, 1, 1);
+            var endDate = startDate.AddYears(1);
+
+            var sales = await _dbContext.POS_SalesMasters
+                .Where(x => 
+                            x.SalesDate >= startDate &&
+                            x.SalesDate < endDate &&
+                            !x.IsDeleted)
+                .Select(x => new
+                {
+                    x.SalesDate,
+                    x.NetAmount
+                })
+                .ToListAsync();
+
+            var purchases = await _dbContext.POS_PurchaseMasters
+                .Where(x => 
+                            x.PurchaseDate >= startDate &&
+                            x.PurchaseDate < endDate &&
+                            !x.IsDeleted)
+                .Select(x => new
+                {
+                    x.PurchaseDate,
+                    x.TotalAmount
+                })
+                .ToListAsync();
+
+            var result = new SalesPurchaseSummaryDTO
+            {
+                SalesAmount = sales.Sum(x => x.NetAmount),
+                PurchaseAmount = purchases.Sum(x => x.TotalAmount),
+
+                MonthlySalesAmounts = Enumerable.Range(1, 12)
+                    .Select(month => sales
+                        .Where(x => x.SalesDate.Month == month)
+                        .Sum(x => x.NetAmount))
+                    .ToArray(),
+
+                MonthlyPurchaseAmounts = Enumerable.Range(1, 12)
+                    .Select(month => purchases
+                        .Where(x => x.PurchaseDate.Month == month)
+                        .Sum(x => x.TotalAmount))
+                    .ToArray()
+            };
+
+            return result;
+        }
+
+
+
+        public async Task<StockInOutSummaryDTO> GetStockInOutSummaryAsync(string companyId, DateTime selectedDate)
+        {
+            var endDate = selectedDate.Date.AddDays(1);
+            var startDate = selectedDate.Date.AddDays(-6);
+
+            var ledgerData = await _dbContext.POS_StockLedgers
+                .Where(x => 
+                            x.TransactionDate >= startDate &&
+                            x.TransactionDate < endDate)
+                .Select(x => new
+                {
+                    x.TransactionDate,
+                    x.InQuantity,
+                    x.OutQuantity
+                })
+                .ToListAsync();
+
+            var result = new StockInOutSummaryDTO();
+
+            for (int i = 0; i < 7; i++)
+            {
+                var date = startDate.AddDays(i);
+
+                result.Labels.Add(date.ToString("ddd"));
+
+                result.StockInData.Add(
+                    ledgerData
+                        .Where(x => x.TransactionDate.Date == date.Date)
+                        .Sum(x => x.InQuantity)
+                );
+
+                result.StockOutData.Add(
+                    ledgerData
+                        .Where(x => x.TransactionDate.Date == date.Date)
+                        .Sum(x => x.OutQuantity)
+                );
+            }
+
+            result.StockInTotal = result.StockInData.Sum();
+            result.StockOutTotal = result.StockOutData.Sum();
+
+            return result;
+        }
+    } 
+
+
         
 }
