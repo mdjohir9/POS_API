@@ -38,6 +38,13 @@ namespace POS_API.Implementation
             // Assuming CompanyId is a property in your entity class
             return await _dbSet.Where(e => EF.Property<string>(e, "CompanyId") == CompanyId).ToListAsync();
         }
+        public async Task<IEnumerable<T>> GetAllNotDeletedAsync(string CompanyId)
+        {
+            return await _dbSet
+                .Where(e => EF.Property<string>(e, "CompanyId") == CompanyId
+                         && EF.Property<bool?>(e, "IsDeleted") != true)
+                .ToListAsync();
+        }
         public async Task<T> GetByIdAsync(int id)
         {
             var entity = await _dbSet.FindAsync(id);

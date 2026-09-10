@@ -28,6 +28,60 @@ namespace POS_API.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpGet]
+        [Route("Purchase/{Id}")]
+        public async Task<IActionResult> GetPurchases(int Id)
+        {
+            try
+            {
+                string cacheKey = $"Purchases_{Id}";
+
+                if (!_cache.TryGetValue(
+                    cacheKey,
+                    out IEnumerable<POSPurchaseMaster> cachedResult))
+                {
+                    var purchases = await _unitOfWork.POSPurchaseMaster.GetByIdAsync(Id);
+
+                    if (purchases == null)
+                    {
+                        return NotFound(new
+                        {
+                            StatusCode = 404,
+                            message = "Purchases not found."
+                        });
+                    }
+
+                    _cache.Set(
+                        cacheKey,
+                        purchases,
+                        TimeSpan.FromMinutes(1)
+                    );
+
+                    return Ok(new
+                    {
+                        StatusCode = 200,
+                        message = "Success",
+                        data = purchases
+                    });
+                }
+
+                return Ok(new
+                {
+                    StatusCode = 200,
+                    message = "Success",
+                    data = cachedResult
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    StatusCode = 500,
+                    message = ex.Message
+                });
+            }
+        }
+
+        [HttpGet]
         [Route("Purchase")]
         public async Task<IActionResult> GetPurchasesById(string companyId)
         {
@@ -39,9 +93,7 @@ namespace POS_API.Controllers
                     cacheKey,
                     out IEnumerable<POSPurchaseMaster> cachedResult))
                 {
-                    var purchases =
-                        await _unitOfWork.POSPurchaseMaster
-                            .GetPurchasesFromViewAsync(companyId);
+                    var purchases =  await _unitOfWork.POSPurchaseMaster.GetPurchasesFromViewAsync(companyId);
 
                     if (purchases == null || !purchases.Any())
                     {
@@ -151,7 +203,6 @@ namespace POS_API.Controllers
                     PurchaseNo = dto.PurchaseNo,
                     PurchaseDate = dto.PurchaseDate,
                     SupplierId = dto.SupplierId,
-                    CompanyId=1,
 
                     TotalAmount = totalAmount,
 

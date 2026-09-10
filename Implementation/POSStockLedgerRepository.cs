@@ -1,4 +1,5 @@
-﻿using POS_API.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using POS_API.Entities;
 using POS_API.Entities.Inventory;
 using POS_API.Repository;
 
@@ -13,6 +14,11 @@ namespace POS_API.Implementation
         {
             _dbContext = dbContext;
             _httpContextAccessor = httpContextAccessor;
+        }
+
+        public async Task<POSStockLedger?> GetLastLedgerByProductIdAsync(long productId)
+        {
+            return await _dbSet.Where(x => x.ProductId == productId) .OrderByDescending(x => x.Id) .FirstOrDefaultAsync();
         }
     }
 }

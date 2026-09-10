@@ -35,7 +35,7 @@ namespace POS_API.Implementation
             POSProductBatch = new POSProductBatchRepository(_dbContext, _httpContextAccessor);
             POSPurchaseMaster = new POSPurchaseMasterRepository(_dbContext,_httpContextAccessor, configuration);
             POSPurchaseDetail = new POSPurchaseDetailRepository(_dbContext,_httpContextAccessor);
-            POSSalesMaster = new POSSalesMasterRepository(_dbContext,_httpContextAccessor);
+            POSSalesMaster = new POSSalesMasterRepository(_dbContext,_httpContextAccessor, configuration);
             POSSalesDetail = new POSSalesDetailRepository(_dbContext ,_httpContextAccessor);
             POSSalesPayment = new POSSalesPaymentRepository(_dbContext, _httpContextAccessor);
             POSSalesPaymentMethod = new POSSalesPaymentMethodRepository(_dbContext, _httpContextAccessor);

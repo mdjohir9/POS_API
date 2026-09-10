@@ -25,12 +25,12 @@ namespace POS_API.Controllers
         }
 
         [HttpGet]
-        [Route("brand")]
+        [Route("brand/{Id}")]
         public async Task<IActionResult> GetBrand(int Id)
         {
             try
             {
-                string cacheKey = "users";
+                string cacheKey = "brands";
                 if (!_cache.TryGetValue(cacheKey, out List<POSBrand> cachedResult))
                 {
                     var users = await _unitOfWork.POSBrand.GetByIdAsync(Id);
@@ -59,10 +59,10 @@ namespace POS_API.Controllers
         {
             try
             {
-                string cacheKey = "users";
+                string cacheKey = "brands";
                 if (!_cache.TryGetValue(cacheKey, out List<POSBrand> cachedResult))
                 {
-                    var users = await _unitOfWork.POSBrand.GetByCompanyIdAsync(companyId);
+                    var users = await _unitOfWork.POSBrand.GetAllNotDeletedAsync(companyId);
                     if (users == null || !users.Any())
                     {
                         return NotFound(new { StatusCode = 404, message = "Users not found!." });
@@ -139,7 +139,7 @@ namespace POS_API.Controllers
 
                 var brand = await _unitOfWork.POSBrand.GetByIdAsync(Id);
 
-                if (brand == null || brand.IsDeleted)
+                if (brand == null)
                 {
                     return NotFound(new
                     {
@@ -183,8 +183,8 @@ namespace POS_API.Controllers
                 // Assuming the user ID of the person performing the delete is stored in the claims
                 await _unitOfWork.POSBrand.DeleteAsync(id);
                 await _unitOfWork.Save();
-                string cacheKey = $"users";
-                string cacheKeyID = $"user{id}";
+                string cacheKey = $"brands";
+                string cacheKeyID = $"brands{id}";
                 _cache.Remove(cacheKeyID);
                 _cache.Remove(cacheKey);
                 return Ok(new { StatusCode = 200, message = "User deleted successfully" });

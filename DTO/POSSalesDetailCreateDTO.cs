@@ -5,8 +5,11 @@ namespace POS_API.DTO
     public class POSSalesDetailCreateDTO
     {
         [Required]
-        public int ProductId { get; set; }
 
+        public int ProductId { get; set; }
+        public int? SalesMasterId { get; set; }
+
+        public string? ProductName { get; set; }
         [Required]
         public decimal Quantity { get; set; }
 

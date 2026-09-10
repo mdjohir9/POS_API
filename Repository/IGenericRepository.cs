@@ -7,7 +7,9 @@ namespace POS_API.Repository
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> GetByCompanyIdAsync(string CompanyId);
-       // Task<IEnumerable<T>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
+        Task<IEnumerable<T>> GetAllNotDeletedAsync(string CompanyId);
+
+        // Task<IEnumerable<T>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
         Task<IEnumerable<T>> GetAllWithOutDeletedAsync();
         Task<T> GetByIdAsync(int id);
         Task<T> GetByIdAsync(string id);

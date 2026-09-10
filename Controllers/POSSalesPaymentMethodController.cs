@@ -97,6 +97,7 @@ namespace POS_API.Controllers
 
         [HttpPut]
         [Route("payment-method/update/{id}")]
+
         public async Task<IActionResult> UpdatePaymentMethod([FromBody] CommonDTO dto, int Id)
         {
             try

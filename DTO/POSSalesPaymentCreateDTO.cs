@@ -6,7 +6,7 @@ namespace POS_API.DTO
     {
         [Required]
         public int PaymentMethodId { get; set; }
-
+        public string? PaymentMethodName { get; set; }
         [Required]
         public decimal Amount { get; set; }
     }
